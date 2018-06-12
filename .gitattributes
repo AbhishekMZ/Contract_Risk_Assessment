@@ -64,3 +64,10 @@ TestRuns/70_contract_detector.pkl filter=lfs diff=lfs merge=lfs -text
 *.map filter=lfs diff=lfs merge=lfs -text
 /Flask/app/Dockerfile filter=lfs diff=lfs merge=lfs -text
 /Flask/Dockerfile filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.tex filter=lfs diff=lfs merge=lfs -text
+*.bib filter=lfs diff=lfs merge=lfs -text
+*.bst filter=lfs diff=lfs merge=lfs -text
+*.sty filter=lfs diff=lfs merge=lfs -text
+*.cls filter=lfs diff=lfs merge=lfs -text
