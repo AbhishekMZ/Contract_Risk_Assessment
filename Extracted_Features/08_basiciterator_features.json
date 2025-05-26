@@ -1,0 +1,67 @@
+{
+    "BasicIterator": {
+        "contract_name_in_file": "BasicIterator",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "BasicIterator()",
+                "signature": "BasicIterator() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "getSum()",
+                "signature": "getSum() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint8 sum"
+                ]
+            },
+            {
+                "name": "kill()",
+                "signature": "kill() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "creator",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "integers",
+                "type": "uint8[10]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,326 @@
+{
+    "msgExaminer": {
+        "contract_name_in_file": "msgExaminer",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "msgExaminer()",
+                "signature": "msgExaminer() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "getContractCreationData()",
+                "signature": "getContractCreationData() returns(bytes)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes contract_creation_data"
+                ]
+            },
+            {
+                "name": "getContractCreationGas()",
+                "signature": "getContractCreationGas() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 contract_creation_gas"
+                ]
+            },
+            {
+                "name": "getContractCreationValue()",
+                "signature": "getContractCreationValue() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 contract_creation_value"
+                ]
+            },
+            {
+                "name": "getContractCreationTxGasprice()",
+                "signature": "getContractCreationTxGasprice() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 contract_creation_tx_gasprice"
+                ]
+            },
+            {
+                "name": "getContractCreationTxOrigin()",
+                "signature": "getContractCreationTxOrigin() returns(address)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "address contract_creation_tx_origin"
+                ]
+            },
+            {
+                "name": "sendOneEtherToMiner()",
+                "signature": "sendOneEtherToMiner() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bool returnval",
+                    "bool success"
+                ]
+            },
+            {
+                "name": "sendOneEtherToHome()",
+                "signature": "sendOneEtherToHome() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bool success",
+                    "bool returnval"
+                ]
+            },
+            {
+                "name": "getMsgDataBefore()",
+                "signature": "getMsgDataBefore() returns(bytes)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes msg_data_before_creator_send"
+                ]
+            },
+            {
+                "name": "getMsgDataAfter()",
+                "signature": "getMsgDataAfter() returns(bytes)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes msg_data_after_creator_send"
+                ]
+            },
+            {
+                "name": "getMsgGasBefore()",
+                "signature": "getMsgGasBefore() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 msg_gas_before_creator_send"
+                ]
+            },
+            {
+                "name": "getMsgGasAfter()",
+                "signature": "getMsgGasAfter() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 msg_gas_after_creator_send"
+                ]
+            },
+            {
+                "name": "getMsgValueBefore()",
+                "signature": "getMsgValueBefore() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 msg_value_before_creator_send"
+                ]
+            },
+            {
+                "name": "getMsgValueAfter()",
+                "signature": "getMsgValueAfter() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 msg_value_after_creator_send"
+                ]
+            },
+            {
+                "name": "kill()",
+                "signature": "kill() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "creator",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "miner",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "contract_creation_data",
+                "type": "bytes",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "contract_creation_gas",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "contract_creation_value",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "contract_creation_tx_gasprice",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "contract_creation_tx_origin",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "msg_data_before_creator_send",
+                "type": "bytes",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "msg_data_after_creator_send",
+                "type": "bytes",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "msg_gas_before_creator_send",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "msg_gas_after_creator_send",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "msg_value_before_creator_send",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "msg_value_after_creator_send",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

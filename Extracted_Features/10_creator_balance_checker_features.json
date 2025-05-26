@@ -1,0 +1,97 @@
+{
+    "creatorBalanceChecker": {
+        "contract_name_in_file": "creatorBalanceChecker",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "creatorBalanceChecker()",
+                "signature": "creatorBalanceChecker() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "getContractAddress()",
+                "signature": "getContractAddress() returns(address)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "address this"
+                ]
+            },
+            {
+                "name": "getCreatorBalance()",
+                "signature": "getCreatorBalance() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 creatorbalance"
+                ]
+            },
+            {
+                "name": "getCreatorDotBalance()",
+                "signature": "getCreatorDotBalance() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_1"
+                ]
+            },
+            {
+                "name": "kill()",
+                "signature": "kill() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "creator",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "creatorbalance",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

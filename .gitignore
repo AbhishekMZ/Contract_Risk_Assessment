@@ -14,18 +14,7 @@ ENV/
 
 # VSCode settings
 .vscode/
-
-# Data and output folders
-External_Results/
-Models/
-Reports/
-Detection_Results/
-Processed_Contracts/
-Preprocessed_Contracts/
-Extracted_Features/
-SmartContracts/
-External_Contracts/
-
+src/
 # OS files
 .DS_Store
 Thumbs.db

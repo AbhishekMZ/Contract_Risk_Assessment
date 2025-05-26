@@ -1,0 +1,217 @@
+{
+    "Government": {
+        "contract_name_in_file": "Government",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "Government()",
+                "signature": "Government() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "lendGovernmentMoney(address)",
+                "signature": "lendGovernmentMoney(address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address buddy"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "fallback()",
+                "signature": "fallback() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "totalDebt()",
+                "signature": "totalDebt() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 debt"
+                ]
+            },
+            {
+                "name": "totalPayedOut()",
+                "signature": "totalPayedOut() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 payout"
+                ]
+            },
+            {
+                "name": "investInTheSystem()",
+                "signature": "investInTheSystem() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "inheritToNextGeneration(address)",
+                "signature": "inheritToNextGeneration(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address nextGeneration"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getCreditorAddresses()",
+                "signature": "getCreditorAddresses() returns(address[])",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "address[] creditorAddresses"
+                ]
+            },
+            {
+                "name": "getCreditorAmounts()",
+                "signature": "getCreditorAmounts() returns(uint256[])",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256[] creditorAmounts"
+                ]
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "lastCreditorPayedOut",
+                "type": "uint32",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "lastTimeOfNewCredit",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "profitFromCrash",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "creditorAddresses",
+                "type": "address[]",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "creditorAmounts",
+                "type": "uint256[]",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "corruptElite",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "buddies",
+                "type": "mapping(address => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "TWELVE_HOURS",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "round",
+                "type": "uint8",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

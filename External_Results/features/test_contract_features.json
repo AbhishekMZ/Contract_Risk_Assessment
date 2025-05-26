@@ -1,0 +1,45 @@
+{
+    "Reentrancy": {
+        "contract_name_in_file": "Reentrancy",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "deposit()",
+                "signature": "deposit() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": true,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawBalance()",
+                "signature": "withdrawBalance() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "userBalances",
+                "type": "mapping(address => uint256)",
+                "visibility": "private",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

@@ -1,0 +1,127 @@
+{
+    "DAO": {
+        "contract_name_in_file": "DAO",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": false,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "balanceOf(address)",
+                "signature": "balanceOf(address) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address addr"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "transferFrom(address,address,uint256)",
+                "signature": "transferFrom(address,address,uint256) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address from",
+                    "address to",
+                    "uint256 balance"
+                ],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "totalSupply",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "WithdrawDAO": {
+        "contract_name_in_file": "WithdrawDAO",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "withdraw()",
+                "signature": "withdraw() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "trusteeWithdraw()",
+                "signature": "trusteeWithdraw() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorVariables()",
+                "signature": "slitherConstructorVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "mainDAO",
+                "type": "DAO",
+                "visibility": "public",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "trustee",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

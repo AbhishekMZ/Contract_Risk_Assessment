@@ -1,0 +1,205 @@
+{
+    "Bytes4ToByteArrayWithLength4": {
+        "contract_name_in_file": "Bytes4ToByteArrayWithLength4",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "Bytes4ToByteArrayWithLength4()",
+                "signature": "Bytes4ToByteArrayWithLength4() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "convertBytes4ToArray(bytes4)",
+                "signature": "convertBytes4ToArray(bytes4) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes4 _a"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getDigit()",
+                "signature": "getDigit() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 digit"
+                ]
+            },
+            {
+                "name": "getFinalBytes()",
+                "signature": "getFinalBytes() returns(bytes1[4])",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes1[4] finalbytes"
+                ]
+            },
+            {
+                "name": "getB0()",
+                "signature": "getB0() returns(bytes1)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes1 b0"
+                ]
+            },
+            {
+                "name": "getB1()",
+                "signature": "getB1() returns(bytes1)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes1 b1"
+                ]
+            },
+            {
+                "name": "getB2()",
+                "signature": "getB2() returns(bytes1)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes1 b2"
+                ]
+            },
+            {
+                "name": "getB3()",
+                "signature": "getB3() returns(bytes1)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bytes1 b3"
+                ]
+            },
+            {
+                "name": "kill()",
+                "signature": "kill() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorVariables()",
+                "signature": "slitherConstructorVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "creator",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "digit",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "b0",
+                "type": "bytes1",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "b1",
+                "type": "bytes1",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "b2",
+                "type": "bytes1",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "b3",
+                "type": "bytes1",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "finalbytes",
+                "type": "bytes1[4]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

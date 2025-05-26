@@ -1,0 +1,1649 @@
+{
+    "Ownable": {
+        "contract_name_in_file": "Ownable",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "Ownable()",
+                "signature": "Ownable() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "transferOwnership(address)",
+                "signature": "transferOwnership(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address newOwner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "onlyOwner()",
+                "signature": "onlyOwner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "owner",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "ERC721": {
+        "contract_name_in_file": "ERC721",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": false,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "totalSupply()",
+                "signature": "totalSupply() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "balanceOf(address)",
+                "signature": "balanceOf(address) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "ownerOf(uint256)",
+                "signature": "ownerOf(uint256) returns(address)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "approve(address,uint256)",
+                "signature": "approve(address,uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _to",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "transfer(address,uint256)",
+                "signature": "transfer(address,uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _to",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "transferFrom(address,address,uint256)",
+                "signature": "transferFrom(address,address,uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _from",
+                    "address _to",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "supportsInterface(bytes4)",
+                "signature": "supportsInterface(bytes4) returns(bool)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes4 _interfaceID"
+                ],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": []
+    },
+    "ClockAuctionBase": {
+        "contract_name_in_file": "ClockAuctionBase",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "_owns(address,uint256)",
+                "signature": "_owns(address,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _claimant",
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "bool TMP_6"
+                ]
+            },
+            {
+                "name": "_escrow(address,uint256)",
+                "signature": "_escrow(address,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_transfer(address,uint256)",
+                "signature": "_transfer(address,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _receiver",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_addAuction(uint256,ClockAuctionBase.Auction)",
+                "signature": "_addAuction(uint256,ClockAuctionBase.Auction) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_cancelAuction(uint256,address)",
+                "signature": "_cancelAuction(uint256,address) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "address _seller"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_bid(uint256,uint256)",
+                "signature": "_bid(uint256,uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "uint256 _bidAmount"
+                ],
+                "return_values": [
+                    "uint256 price"
+                ]
+            },
+            {
+                "name": "_removeAuction(uint256)",
+                "signature": "_removeAuction(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_isOnAuction(ClockAuctionBase.Auction)",
+                "signature": "_isOnAuction(ClockAuctionBase.Auction) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": [
+                    "bool TMP_32"
+                ]
+            },
+            {
+                "name": "_currentPrice(ClockAuctionBase.Auction)",
+                "signature": "_currentPrice(ClockAuctionBase.Auction) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": [
+                    "uint256 TMP_35"
+                ]
+            },
+            {
+                "name": "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+                "signature": "_computeCurrentPrice(uint256,uint256,uint256,uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": true,
+                "parameters": [
+                    "uint256 _startingPrice",
+                    "uint256 _endingPrice",
+                    "uint256 _duration",
+                    "uint256 _secondsPassed"
+                ],
+                "return_values": [
+                    "uint256 TMP_46",
+                    "uint256 _endingPrice"
+                ]
+            },
+            {
+                "name": "_computeCut(uint256)",
+                "signature": "_computeCut(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _price"
+                ],
+                "return_values": [
+                    "uint256 TMP_48"
+                ]
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "nonFungibleContract",
+                "type": "ERC721",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "ownerCut",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "tokenIdToAuction",
+                "type": "mapping(uint256 => ClockAuctionBase.Auction)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "Pausable": {
+        "contract_name_in_file": "Pausable",
+        "kind": "contract",
+        "inheritance": [
+            "Ownable"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "Ownable()",
+                "signature": "Ownable() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "transferOwnership(address)",
+                "signature": "transferOwnership(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address newOwner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "pause()",
+                "signature": "pause() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner",
+                    "whenNotPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "unpause()",
+                "signature": "unpause() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner",
+                    "whenPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorVariables()",
+                "signature": "slitherConstructorVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlyOwner()",
+                "signature": "onlyOwner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "whenNotPaused()",
+                "signature": "whenNotPaused() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "whenPaused()",
+                "signature": "whenPaused() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "owner",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "paused",
+                "type": "bool",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "ClockAuction": {
+        "contract_name_in_file": "ClockAuction",
+        "kind": "contract",
+        "inheritance": [
+            "ClockAuctionBase",
+            "Pausable",
+            "Ownable"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "_owns(address,uint256)",
+                "signature": "_owns(address,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _claimant",
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "bool TMP_64"
+                ]
+            },
+            {
+                "name": "_escrow(address,uint256)",
+                "signature": "_escrow(address,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_transfer(address,uint256)",
+                "signature": "_transfer(address,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _receiver",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_addAuction(uint256,ClockAuctionBase.Auction)",
+                "signature": "_addAuction(uint256,ClockAuctionBase.Auction) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_cancelAuction(uint256,address)",
+                "signature": "_cancelAuction(uint256,address) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "address _seller"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_bid(uint256,uint256)",
+                "signature": "_bid(uint256,uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "uint256 _bidAmount"
+                ],
+                "return_values": [
+                    "uint256 price"
+                ]
+            },
+            {
+                "name": "_removeAuction(uint256)",
+                "signature": "_removeAuction(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_isOnAuction(ClockAuctionBase.Auction)",
+                "signature": "_isOnAuction(ClockAuctionBase.Auction) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": [
+                    "bool TMP_90"
+                ]
+            },
+            {
+                "name": "_currentPrice(ClockAuctionBase.Auction)",
+                "signature": "_currentPrice(ClockAuctionBase.Auction) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": [
+                    "uint256 TMP_93"
+                ]
+            },
+            {
+                "name": "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+                "signature": "_computeCurrentPrice(uint256,uint256,uint256,uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": true,
+                "parameters": [
+                    "uint256 _startingPrice",
+                    "uint256 _endingPrice",
+                    "uint256 _duration",
+                    "uint256 _secondsPassed"
+                ],
+                "return_values": [
+                    "uint256 TMP_104",
+                    "uint256 _endingPrice"
+                ]
+            },
+            {
+                "name": "_computeCut(uint256)",
+                "signature": "_computeCut(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _price"
+                ],
+                "return_values": [
+                    "uint256 TMP_106"
+                ]
+            },
+            {
+                "name": "pause()",
+                "signature": "pause() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner",
+                    "whenNotPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "unpause()",
+                "signature": "unpause() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner",
+                    "whenPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "Ownable()",
+                "signature": "Ownable() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "transferOwnership(address)",
+                "signature": "transferOwnership(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address newOwner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "ClockAuction(address,uint256)",
+                "signature": "ClockAuction(address,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _nftAddress",
+                    "uint256 _cut"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "withdrawBalance()",
+                "signature": "withdrawBalance() returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "createAuction(uint256,uint256,uint256,uint256,address)",
+                "signature": "createAuction(uint256,uint256,uint256,uint256,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "whenNotPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "uint256 _startingPrice",
+                    "uint256 _endingPrice",
+                    "uint256 _duration",
+                    "address _seller"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "bid(uint256)",
+                "signature": "bid(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "whenNotPaused"
+                ],
+                "is_payable": true,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "cancelAuction(uint256)",
+                "signature": "cancelAuction(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "cancelAuctionWhenPaused(uint256)",
+                "signature": "cancelAuctionWhenPaused(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "whenPaused",
+                    "onlyOwner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getAuction(uint256)",
+                "signature": "getAuction(uint256) returns(address,uint256,uint256,uint256,uint256)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "uint256 startingPrice",
+                    "uint256 endingPrice",
+                    "address REF_46",
+                    "uint64 REF_49",
+                    "uint256 duration",
+                    "uint128 REF_47",
+                    "uint128 REF_48",
+                    "uint256 startedAt",
+                    "uint64 REF_50",
+                    "address seller"
+                ]
+            },
+            {
+                "name": "getCurrentPrice(uint256)",
+                "signature": "getCurrentPrice(uint256) returns(uint256)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "uint256 TMP_166"
+                ]
+            },
+            {
+                "name": "slitherConstructorVariables()",
+                "signature": "slitherConstructorVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "whenNotPaused()",
+                "signature": "whenNotPaused() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "whenPaused()",
+                "signature": "whenPaused() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlyOwner()",
+                "signature": "onlyOwner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "owner",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "paused",
+                "type": "bool",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "nonFungibleContract",
+                "type": "ERC721",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "ownerCut",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "tokenIdToAuction",
+                "type": "mapping(uint256 => ClockAuctionBase.Auction)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "InterfaceSignature_ERC721",
+                "type": "bytes4",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            }
+        ]
+    },
+    "SaleClockAuction": {
+        "contract_name_in_file": "SaleClockAuction",
+        "kind": "contract",
+        "inheritance": [
+            "ClockAuction",
+            "ClockAuctionBase",
+            "Pausable",
+            "Ownable"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "ClockAuction(address,uint256)",
+                "signature": "ClockAuction(address,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _nftAddress",
+                    "uint256 _cut"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "withdrawBalance()",
+                "signature": "withdrawBalance() returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "createAuction(uint256,uint256,uint256,uint256,address)",
+                "signature": "createAuction(uint256,uint256,uint256,uint256,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "whenNotPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "uint256 _startingPrice",
+                    "uint256 _endingPrice",
+                    "uint256 _duration",
+                    "address _seller"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "bid(uint256)",
+                "signature": "bid(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "whenNotPaused"
+                ],
+                "is_payable": true,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "cancelAuction(uint256)",
+                "signature": "cancelAuction(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "cancelAuctionWhenPaused(uint256)",
+                "signature": "cancelAuctionWhenPaused(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "whenPaused",
+                    "onlyOwner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getAuction(uint256)",
+                "signature": "getAuction(uint256) returns(address,uint256,uint256,uint256,uint256)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "uint64 REF_64",
+                    "uint256 duration",
+                    "uint128 REF_61",
+                    "address seller",
+                    "uint256 startedAt",
+                    "address REF_60",
+                    "uint256 endingPrice",
+                    "uint256 startingPrice",
+                    "uint128 REF_62",
+                    "uint64 REF_63"
+                ]
+            },
+            {
+                "name": "getCurrentPrice(uint256)",
+                "signature": "getCurrentPrice(uint256) returns(uint256)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "uint256 TMP_223"
+                ]
+            },
+            {
+                "name": "_owns(address,uint256)",
+                "signature": "_owns(address,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _claimant",
+                    "uint256 _tokenId"
+                ],
+                "return_values": [
+                    "bool TMP_225"
+                ]
+            },
+            {
+                "name": "_escrow(address,uint256)",
+                "signature": "_escrow(address,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_transfer(address,uint256)",
+                "signature": "_transfer(address,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _receiver",
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_addAuction(uint256,ClockAuctionBase.Auction)",
+                "signature": "_addAuction(uint256,ClockAuctionBase.Auction) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_cancelAuction(uint256,address)",
+                "signature": "_cancelAuction(uint256,address) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "address _seller"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_bid(uint256,uint256)",
+                "signature": "_bid(uint256,uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "uint256 _bidAmount"
+                ],
+                "return_values": [
+                    "uint256 price"
+                ]
+            },
+            {
+                "name": "_removeAuction(uint256)",
+                "signature": "_removeAuction(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "_isOnAuction(ClockAuctionBase.Auction)",
+                "signature": "_isOnAuction(ClockAuctionBase.Auction) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": [
+                    "bool TMP_251"
+                ]
+            },
+            {
+                "name": "_currentPrice(ClockAuctionBase.Auction)",
+                "signature": "_currentPrice(ClockAuctionBase.Auction) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "ClockAuctionBase.Auction _auction"
+                ],
+                "return_values": [
+                    "uint256 TMP_254"
+                ]
+            },
+            {
+                "name": "_computeCurrentPrice(uint256,uint256,uint256,uint256)",
+                "signature": "_computeCurrentPrice(uint256,uint256,uint256,uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": true,
+                "parameters": [
+                    "uint256 _startingPrice",
+                    "uint256 _endingPrice",
+                    "uint256 _duration",
+                    "uint256 _secondsPassed"
+                ],
+                "return_values": [
+                    "uint256 _endingPrice",
+                    "uint256 TMP_265"
+                ]
+            },
+            {
+                "name": "_computeCut(uint256)",
+                "signature": "_computeCut(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _price"
+                ],
+                "return_values": [
+                    "uint256 TMP_267"
+                ]
+            },
+            {
+                "name": "pause()",
+                "signature": "pause() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner",
+                    "whenNotPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "unpause()",
+                "signature": "unpause() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner",
+                    "whenPaused"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "Ownable()",
+                "signature": "Ownable() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "transferOwnership(address)",
+                "signature": "transferOwnership(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyOwner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address newOwner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "SaleClockAuction(address,uint256)",
+                "signature": "SaleClockAuction(address,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _nftAddr",
+                    "uint256 _cut"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "createAuction(uint256,uint256,uint256,uint256,address)",
+                "signature": "createAuction(uint256,uint256,uint256,uint256,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId",
+                    "uint256 _startingPrice",
+                    "uint256 _endingPrice",
+                    "uint256 _duration",
+                    "address _seller"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "bid(uint256)",
+                "signature": "bid(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": true,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _tokenId"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "averageGen0SalePrice()",
+                "signature": "averageGen0SalePrice() returns(uint256)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_308"
+                ]
+            },
+            {
+                "name": "slitherConstructorVariables()",
+                "signature": "slitherConstructorVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "whenNotPaused()",
+                "signature": "whenNotPaused() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "whenPaused()",
+                "signature": "whenPaused() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlyOwner()",
+                "signature": "onlyOwner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "owner",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "paused",
+                "type": "bool",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "nonFungibleContract",
+                "type": "ERC721",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "ownerCut",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "tokenIdToAuction",
+                "type": "mapping(uint256 => ClockAuctionBase.Auction)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "InterfaceSignature_ERC721",
+                "type": "bytes4",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "isSaleClockAuction",
+                "type": "bool",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "gen0SaleCount",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "lastGen0SalePrices",
+                "type": "uint256[5]",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

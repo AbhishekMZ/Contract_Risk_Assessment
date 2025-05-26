@@ -1,0 +1,170 @@
+{
+    "slither_success": false,
+    "slither_error": "Slither failed to produce output JSON.",
+    "slither_stderr": null,
+    "slither_findings": [],
+    "custom_findings": [
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "for (uint i=2; i<2+2*20; i+=2){",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            150
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "iaddr *= 256;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            151
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "if ((b1 >= 97)&&(b1 <= 102)) b1 -= 87;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            154
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "else if ((b1 >= 48)&&(b1 <= 57)) b1 -= 48;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            155
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "if ((b2 >= 97)&&(b2 <= 102)) b2 -= 87;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            156
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "else if ((b2 >= 48)&&(b2 <= 57)) b2 -= 48;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            157
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "mint *= 10;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            255
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "mint += uint(bresult[i]) - 48;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            256
+                        ],
+                        "filename_relative": "oraclize.sol"
+                    }
+                }
+            ]
+        }
+    ],
+    "total_slither_issues": 0,
+    "total_custom_issues": 8
+}

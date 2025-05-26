@@ -1,0 +1,445 @@
+{
+    "05_greeter.sol": {
+        "original_filename": "05_greeter.sol",
+        "processed_filepath": "Preprocessed_Contracts\\05_greeter.sol",
+        "hash": "eef63611b022d916f983b07b6b632c579d4cc28fdbbc24d53785686e121a9f20",
+        "contract_names_regex": []
+    },
+    "08_basiciterator.sol": {
+        "original_filename": "08_basiciterator.sol",
+        "processed_filepath": "Preprocessed_Contracts\\08_basiciterator.sol",
+        "hash": "6f4b131e562ce50d0351f4afeec92bb4c699c71bfe91774d87a8f3343f88dfea",
+        "contract_names_regex": [
+            "BasicIterator"
+        ]
+    },
+    "10_creator_balance_checker.sol": {
+        "original_filename": "10_creator_balance_checker.sol",
+        "processed_filepath": "Preprocessed_Contracts\\10_creator_balance_checker.sol",
+        "hash": "33ea5b1e7ddbc1c2c4e0e632596b6e055cb7530e57c7e028fe81bce083f28b3e",
+        "contract_names_regex": [
+            "creatorBalanceChecker"
+        ]
+    },
+    "15_basic_info_getter.sol": {
+        "original_filename": "15_basic_info_getter.sol",
+        "processed_filepath": "Preprocessed_Contracts\\15_basic_info_getter.sol",
+        "hash": "4d90b1fa80c26fca790c29dd0ee6189d1704ea2647d4fabe128e42a0b29e75b8",
+        "contract_names_regex": [
+            "basicInfoGetter"
+        ]
+    },
+    "20_value_incrementer.sol": {
+        "original_filename": "20_value_incrementer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\20_value_incrementer.sol",
+        "hash": "77a6a73a050ad8df7567b98c01d999f1e939550325e864126ce170d33eb4c32c",
+        "contract_names_regex": [
+            "Incrementer"
+        ]
+    },
+    "21_value_incrementer2.sol": {
+        "original_filename": "21_value_incrementer2.sol",
+        "processed_filepath": "Preprocessed_Contracts\\21_value_incrementer2.sol",
+        "hash": "a955e4b6237dcd646c4f13a8d81ecf829eeddb695eefb3f20bcc64cdd30b3c64",
+        "contract_names_regex": [
+            "Incrementer2"
+        ]
+    },
+    "22_value_incrementer3.sol": {
+        "original_filename": "22_value_incrementer3.sol",
+        "processed_filepath": "Preprocessed_Contracts\\22_value_incrementer3.sol",
+        "hash": "5e458b3e4465fcc1603b0619b184a4ac304e669f7730d8c705a5d66798304611",
+        "contract_names_regex": [
+            "Incrementer3"
+        ]
+    },
+    "25_msg_examiner.sol": {
+        "original_filename": "25_msg_examiner.sol",
+        "processed_filepath": "Preprocessed_Contracts\\25_msg_examiner.sol",
+        "hash": "dc65a2593cdfcaf1ee19d251bcfcd73651af41236299976f9b60c980f78d7512",
+        "contract_names_regex": [
+            "msgExaminer"
+        ]
+    },
+    "30_endowment_retriever.sol": {
+        "original_filename": "30_endowment_retriever.sol",
+        "processed_filepath": "Preprocessed_Contracts\\30_endowment_retriever.sol",
+        "hash": "04250c540fb389adf6f6d98c605b7ac25b94e18353331b38ea679ca7a9e5e3a8",
+        "contract_names_regex": [
+            "EndowmentRetriever"
+        ]
+    },
+    "35_coin_flipper.sol": {
+        "original_filename": "35_coin_flipper.sol",
+        "processed_filepath": "Preprocessed_Contracts\\35_coin_flipper.sol",
+        "hash": "b61ba8d84ae0c2f2b7dcb4cc934e3ac57405a8755fd9fe9a104113da0fdde975",
+        "contract_names_regex": [
+            "CoinFlipper"
+        ]
+    },
+    "40_multiple_constructor_test.sol": {
+        "original_filename": "40_multiple_constructor_test.sol",
+        "processed_filepath": "Preprocessed_Contracts\\40_multiple_constructor_test.sol",
+        "hash": "9bbdcf8c1ba08373f83d23547a24a19defa50c1d32ad1d2db7564d055219e99c",
+        "contract_names_regex": [
+            "MultipleConstructorTest"
+        ]
+    },
+    "45_ping.sol": {
+        "original_filename": "45_ping.sol",
+        "processed_filepath": "Preprocessed_Contracts\\45_ping.sol",
+        "hash": "cb8c51b61764eb2b53962e863cb526ecf4234f2c3db1f1e322e9610158a5def3",
+        "contract_names_regex": [
+            "PongvalRetriever",
+            "Ping"
+        ]
+    },
+    "45_pong.sol": {
+        "original_filename": "45_pong.sol",
+        "processed_filepath": "Preprocessed_Contracts\\45_pong.sol",
+        "hash": "7ffb2b2e6f5ac4ce1f26fcf43a49f9b759b46e55afdc9238e61d5d41df573d57",
+        "contract_names_regex": [
+            "Pong"
+        ]
+    },
+    "46_ping_via_send.sol": {
+        "original_filename": "46_ping_via_send.sol",
+        "processed_filepath": "Preprocessed_Contracts\\46_ping_via_send.sol",
+        "hash": "63ef43ef61a645838a0e5af174e75e8b12faa63318822d698d58ad48936dd01f",
+        "contract_names_regex": [
+            "Ping"
+        ]
+    },
+    "46_pong_via_send.sol": {
+        "original_filename": "46_pong_via_send.sol",
+        "processed_filepath": "Preprocessed_Contracts\\46_pong_via_send.sol",
+        "hash": "b8a380aed84f74ca9f2f1a3532977c860d8a3de57fbc25bb25f1ef0a8c9aa8da",
+        "contract_names_regex": [
+            "Pong"
+        ]
+    },
+    "47_array_passer.sol": {
+        "original_filename": "47_array_passer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\47_array_passer.sol",
+        "hash": "1f706b4a80fc99f0d101ce9cbf995407cbc88bfe6afadc6fc00ff11dff0d475e",
+        "contract_names_regex": [
+            "ArrayPasser"
+        ]
+    },
+    "47_bytes32_passer.sol": {
+        "original_filename": "47_bytes32_passer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\47_bytes32_passer.sol",
+        "hash": "f20337ac73282027b3f7c1e5ca3d3131982749eac5588a3ca76627fa0eb8c5d0",
+        "contract_names_regex": [
+            "Descriptor",
+            "Bytes32Passer"
+        ]
+    },
+    "47_string_passer.sol": {
+        "original_filename": "47_string_passer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\47_string_passer.sol",
+        "hash": "c4e7cf61efcf8314d06ca30e606da0d96ab6ebf46a8e2d939eb6398c0c05165e",
+        "contract_names_regex": [
+            "Descriptor",
+            "StringPasser"
+        ]
+    },
+    "48_msg_value_to_bytes20.sol": {
+        "original_filename": "48_msg_value_to_bytes20.sol",
+        "processed_filepath": "Preprocessed_Contracts\\48_msg_value_to_bytes20.sol",
+        "hash": "b5099b42addfded948686b0fbae985d6f644a890d6e46e18004cae79ee7dddb9",
+        "contract_names_regex": [
+            "MsgValueToBytes20"
+        ]
+    },
+    "50_replicator.sol": {
+        "original_filename": "50_replicator.sol",
+        "processed_filepath": "Preprocessed_Contracts\\50_replicator.sol",
+        "hash": "0cf33aa794fc8ea6168773071465607b0e40eb27bdb7c3f10fea6d769cf37089",
+        "contract_names_regex": [
+            "ReplicatorB",
+            "ReplicatorA"
+        ]
+    },
+    "55_2D_array.sol": {
+        "original_filename": "55_2D_array.sol",
+        "processed_filepath": "Preprocessed_Contracts\\55_2D_array.sol",
+        "hash": "3e26146a5b8f341c01f12d29c62ea58ecd66d63afe425357eda4fe22bf03b3ea",
+        "contract_names_regex": [
+            "TwoD"
+        ]
+    },
+    "57_fixedbytearray_to_byte_array.sol": {
+        "original_filename": "57_fixedbytearray_to_byte_array.sol",
+        "processed_filepath": "Preprocessed_Contracts\\57_fixedbytearray_to_byte_array.sol",
+        "hash": "64ffd9e03fb52828d324a0d0dbbb33d4a43ad0948a4b7cfb7ad8a645ee747e05",
+        "contract_names_regex": [
+            "Bytes4ToByteArrayWithLength4"
+        ]
+    },
+    "58_indexOf.sol": {
+        "original_filename": "58_indexOf.sol",
+        "processed_filepath": "Preprocessed_Contracts\\58_indexOf.sol",
+        "hash": "ff221b4f76ad3911bf45ef28b095de10994d99239c33c9f07966fbef5277dd0d",
+        "contract_names_regex": [
+            "IndexOf"
+        ]
+    },
+    "59_byteExtractor.sol": {
+        "original_filename": "59_byteExtractor.sol",
+        "processed_filepath": "Preprocessed_Contracts\\59_byteExtractor.sol",
+        "hash": "ff9c0d402128b445a5d69892b5c7fb435add62514e35fea6d52391893845c559",
+        "contract_names_regex": [
+            "ByteExtractor"
+        ]
+    },
+    "60_array_receiver_and_returner.sol": {
+        "original_filename": "60_array_receiver_and_returner.sol",
+        "processed_filepath": "Preprocessed_Contracts\\60_array_receiver_and_returner.sol",
+        "hash": "15048d430ad1bd1ac70f0a23b81c25be944ec60525af26aeaaa1865e504f61e7",
+        "contract_names_regex": [
+            "ArrayRR"
+        ]
+    },
+    "65_struct_and_for_loop_tester.sol": {
+        "original_filename": "65_struct_and_for_loop_tester.sol",
+        "processed_filepath": "Preprocessed_Contracts\\65_struct_and_for_loop_tester.sol",
+        "hash": "bc9543dc7d4d4371ecc89f0ce4147a5a663521b826595c202bd744ef25433dea",
+        "contract_names_regex": [
+            "StructAndFor"
+        ]
+    },
+    "70_contract_detector.sol": {
+        "original_filename": "70_contract_detector.sol",
+        "processed_filepath": "Preprocessed_Contracts\\70_contract_detector.sol",
+        "hash": "612e0c0746131083cc0c958c5a500f8e0b3f3c1007a3f4810989ca9ddaf6d131",
+        "contract_names_regex": [
+            "ContractDetector"
+        ]
+    },
+    "BrokenToken.sol": {
+        "original_filename": "BrokenToken.sol",
+        "processed_filepath": "Preprocessed_Contracts\\BrokenToken.sol",
+        "hash": "f550318a4abecdb2833df430a901a199fce1f4d9c412bbe9a39ac080e6665bc7",
+        "contract_names_regex": [
+            "BrokenToken"
+        ]
+    },
+    "casino.sol": {
+        "original_filename": "casino.sol",
+        "processed_filepath": "Preprocessed_Contracts\\casino.sol",
+        "hash": "caa0c626b8f429f9eff23021026ba7dac7ddf5ddda9994492501527c7e4285b6",
+        "contract_names_regex": [
+            "Casino"
+        ]
+    },
+    "cryptokitties.sol": {
+        "original_filename": "cryptokitties.sol",
+        "processed_filepath": "Preprocessed_Contracts\\cryptokitties.sol",
+        "hash": "b52a37010a27f2fb73de25774f81d48789b370901f7f566dd0549c11c3d5823d",
+        "contract_names_regex": [
+            "Ownable",
+            "ERC721",
+            "GeneScienceInterface",
+            "KittyAccessControl",
+            "KittyBase",
+            "ERC721Metadata",
+            "KittyOwnership",
+            "KittyBreeding",
+            "ClockAuctionBase",
+            "Pausable",
+            "ClockAuction",
+            "SiringClockAuction",
+            "SaleClockAuction",
+            "KittyAuction",
+            "KittyMinting",
+            "KittyCore"
+        ]
+    },
+    "DAO.sol": {
+        "original_filename": "DAO.sol",
+        "processed_filepath": "Preprocessed_Contracts\\DAO.sol",
+        "hash": "4b26c2dc7b6b49da69e5a7c30a52597555c55e49a0378080cb80a4ef521e11b4",
+        "contract_names_regex": [
+            "DAOInterface",
+            "DAO"
+        ]
+    },
+    "DAOTokenCreationProxyTransferer.sol": {
+        "original_filename": "DAOTokenCreationProxyTransferer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\DAOTokenCreationProxyTransferer.sol",
+        "hash": "221626052c32f4625edbcd969816773566304ed57c10003039b91741ca392291",
+        "contract_names_regex": [
+            "DAOTokenCreationProxyTransferer"
+        ]
+    },
+    "DTHPool.sol": {
+        "original_filename": "DTHPool.sol",
+        "processed_filepath": "Preprocessed_Contracts\\DTHPool.sol",
+        "hash": "4af7dd5549e14470ceddf416eec00fca73ec4b184f0815053738d97beb0aebbe",
+        "contract_names_regex": [
+            "DAO",
+            "DTHPoolInterface",
+            "DTHPool"
+        ]
+    },
+    "HoneyPot.sol": {
+        "original_filename": "HoneyPot.sol",
+        "processed_filepath": "Preprocessed_Contracts\\HoneyPot.sol",
+        "hash": "9b5000287e75887c75a0381a51a9373611ca45b54221a6a40e2712bb68267bf6",
+        "contract_names_regex": [
+            "HoneyPot"
+        ]
+    },
+    "kingoftheether.sol": {
+        "original_filename": "kingoftheether.sol",
+        "processed_filepath": "Preprocessed_Contracts\\kingoftheether.sol",
+        "hash": "11230ca4728d87f74e4013c8b5f782362c567861901abeaad6e296e716b4b0dc",
+        "contract_names_regex": [
+            "ReentryProtectorMixin",
+            "CarefulSenderMixin",
+            "FundsHolderMixin",
+            "MoneyRounderMixin",
+            "NameableMixin",
+            "ThroneRulesMixin",
+            "Kingdom",
+            "KingdomFactory",
+            "World",
+            "ExposedInternalsForTesting"
+        ]
+    },
+    "Offer.sol": {
+        "original_filename": "Offer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\Offer.sol",
+        "hash": "cf9d66463e08f4c9e1beb661292e53da5417c1cdceeb36edbe3756eba0099642",
+        "contract_names_regex": [
+            "Offer"
+        ]
+    },
+    "oraclize.sol": {
+        "original_filename": "oraclize.sol",
+        "processed_filepath": "Preprocessed_Contracts\\oraclize.sol",
+        "hash": "a0b73419fff2844fc32dd8352bacbd37eeef7ae53240cb38b870a4d6195c48db",
+        "contract_names_regex": [
+            "OraclizeI",
+            "OraclizeAddrResolverI",
+            "usingOraclize"
+        ]
+    },
+    "PFOffer.sol": {
+        "original_filename": "PFOffer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\PFOffer.sol",
+        "hash": "358aab539067f5d6d9de4542d92f3652306c077d76dc8e28eb75d9789aa13368",
+        "contract_names_regex": [
+            "PFOffer"
+        ]
+    },
+    "ponzigovernmental.sol": {
+        "original_filename": "ponzigovernmental.sol",
+        "processed_filepath": "Preprocessed_Contracts\\ponzigovernmental.sol",
+        "hash": "75f4bc1c113632c70e9ec18eae08cf4f4249e598bacd2c0721e6a544207ee561",
+        "contract_names_regex": [
+            "Government"
+        ]
+    },
+    "reentrancy.sol": {
+        "original_filename": "reentrancy.sol",
+        "processed_filepath": "Preprocessed_Contracts\\reentrancy.sol",
+        "hash": "8c12f5a9598ecda42cadebae775480ac983f8b6ef20c43c1408afa078e4d0175",
+        "contract_names_regex": [
+            "Reentrance"
+        ]
+    },
+    "revain.sol": {
+        "original_filename": "revain.sol",
+        "processed_filepath": "Preprocessed_Contracts\\revain.sol",
+        "hash": "c49a9165e7511e968246e64bad05a0fd39dcc4a32259f7a1b8194fd8d879436c",
+        "contract_names_regex": [
+            "Ownable",
+            "ERC721",
+            "ClockAuctionBase",
+            "Pausable",
+            "ClockAuction",
+            "SaleClockAuction"
+        ]
+    },
+    "RewardOffer.sol": {
+        "original_filename": "RewardOffer.sol",
+        "processed_filepath": "Preprocessed_Contracts\\RewardOffer.sol",
+        "hash": "b2785057abd558539f1a5cb26163a8d1abd7ef6bd4cce606f3b1587fed8e89d5",
+        "contract_names_regex": [
+            "RewardOffer"
+        ]
+    },
+    "simpleWithdraw.sol": {
+        "original_filename": "simpleWithdraw.sol",
+        "processed_filepath": "Preprocessed_Contracts\\simpleWithdraw.sol",
+        "hash": "0b0d2c96c7dd8add2d1160891616741aea02adbb6f40956e9772bb11f76b4339",
+        "contract_names_regex": [
+            "Withdraw"
+        ]
+    },
+    "simpleWithdrawTrustee.sol": {
+        "original_filename": "simpleWithdrawTrustee.sol",
+        "processed_filepath": "Preprocessed_Contracts\\simpleWithdrawTrustee.sol",
+        "hash": "b524a8910b5e2fc77dbbb62742818f0694f1254def18b1e845c578d617c2beed",
+        "contract_names_regex": [
+            "DAO",
+            "WithdrawDAO"
+        ]
+    },
+    "Token.sol": {
+        "original_filename": "Token.sol",
+        "processed_filepath": "Preprocessed_Contracts\\Token.sol",
+        "hash": "87c4ec1f982c9ef0cff94b7d7aaf779cb73522bbf92c9245cc3af50a7518099d",
+        "contract_names_regex": [
+            "Plutocracy",
+            "TokenInterface",
+            "Token"
+        ]
+    },
+    "TokenCreation.sol": {
+        "original_filename": "TokenCreation.sol",
+        "processed_filepath": "Preprocessed_Contracts\\TokenCreation.sol",
+        "hash": "be4a691c7bf9c51e4840651f3e9d30a1cd693fb0da2ac01b51a449717d5a6109",
+        "contract_names_regex": [
+            "TokenCreationInterface",
+            "TokenCreation"
+        ]
+    },
+    "USNRewardPayOut.sol": {
+        "original_filename": "USNRewardPayOut.sol",
+        "processed_filepath": "Preprocessed_Contracts\\USNRewardPayOut.sol",
+        "hash": "5130c6db2cf84097f357a50d457ce71ee87bb0a565d7d17f6c0c29f0dfb65608",
+        "contract_names_regex": [
+            "USNRewardPayOut"
+        ]
+    },
+    "wallet.sol": {
+        "original_filename": "wallet.sol",
+        "processed_filepath": "Preprocessed_Contracts\\wallet.sol",
+        "hash": "30812aaa96d27e1199917339444ee9b62dfe86ff4cf48971c4b8f661d94d1c72",
+        "contract_names_regex": [
+            "multiowned",
+            "daylimit",
+            "multisig",
+            "Wallet"
+        ]
+    },
+    "withdraw.sol": {
+        "original_filename": "withdraw.sol",
+        "processed_filepath": "Preprocessed_Contracts\\withdraw.sol",
+        "hash": "0b1bf83afa415f661db2e954b2883507e40b23007ba424758c03058bf94e84a3",
+        "contract_names_regex": [
+            "Withdraw"
+        ]
+    },
+    "withdrawBlack.sol": {
+        "original_filename": "withdrawBlack.sol",
+        "processed_filepath": "Preprocessed_Contracts\\withdrawBlack.sol",
+        "hash": "866b7fed2fa2acef2ddb628fb7665d5d410d460cae72e52741dc01c9a3029c88",
+        "contract_names_regex": [
+            "Withdraw"
+        ]
+    }
+}

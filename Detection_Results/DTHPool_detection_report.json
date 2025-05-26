@@ -1,0 +1,70 @@
+{
+    "slither_success": false,
+    "slither_error": "Slither failed to produce output JSON.",
+    "slither_stderr": null,
+    "slither_findings": [],
+    "custom_findings": [
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "totalSupply += _amount;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            198
+                        ],
+                        "filename_relative": "DTHPool.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "totalSupply -= _amount;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            214
+                        ],
+                        "filename_relative": "DTHPool.sol"
+                    }
+                }
+            ]
+        },
+        {
+            "check": "Integer_Overflow_Underflow_Candidate_Basic",
+            "impact": "Low",
+            "confidence": "Medium",
+            "description": "Potential basic integer arithmetic operation, needs careful review for overflow/underflow. Slither is much better at this. (Custom Rule Match)",
+            "elements": [
+                {
+                    "type": "line",
+                    "name": "totalSupply += fixTokens;",
+                    "source_mapping": {
+                        "start": -1,
+                        "length": -1,
+                        "lines": [
+                            305
+                        ],
+                        "filename_relative": "DTHPool.sol"
+                    }
+                }
+            ]
+        }
+    ],
+    "total_slither_issues": 0,
+    "total_custom_issues": 3
+}

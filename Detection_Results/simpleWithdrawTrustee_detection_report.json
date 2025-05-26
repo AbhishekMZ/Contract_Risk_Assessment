@@ -1,0 +1,307 @@
+{
+    "slither_success": true,
+    "slither_error": null,
+    "slither_stderr": null,
+    "slither_findings": [
+        {
+            "elements": [
+                {
+                    "type": "function",
+                    "name": "trusteeWithdraw",
+                    "source_mapping": {
+                        "start": 1273,
+                        "length": 124,
+                        "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            35,
+                            36,
+                            37
+                        ],
+                        "starting_column": 5,
+                        "ending_column": 6
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "contract",
+                            "name": "WithdrawDAO",
+                            "source_mapping": {
+                                "start": 861,
+                                "length": 539,
+                                "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    24,
+                                    25,
+                                    26,
+                                    27,
+                                    28,
+                                    29,
+                                    30,
+                                    31,
+                                    32,
+                                    33,
+                                    34,
+                                    35,
+                                    36,
+                                    37,
+                                    38,
+                                    39
+                                ],
+                                "starting_column": 1,
+                                "ending_column": 0
+                            }
+                        },
+                        "signature": "trusteeWithdraw()"
+                    }
+                },
+                {
+                    "type": "node",
+                    "name": "trustee.send((this.balance + mainDAO.balanceOf(this)) - mainDAO.totalSupply())",
+                    "source_mapping": {
+                        "start": 1311,
+                        "length": 78,
+                        "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            36
+                        ],
+                        "starting_column": 9,
+                        "ending_column": 87
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "function",
+                            "name": "trusteeWithdraw",
+                            "source_mapping": {
+                                "start": 1273,
+                                "length": 124,
+                                "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    35,
+                                    36,
+                                    37
+                                ],
+                                "starting_column": 5,
+                                "ending_column": 6
+                            },
+                            "type_specific_fields": {
+                                "parent": {
+                                    "type": "contract",
+                                    "name": "WithdrawDAO",
+                                    "source_mapping": {
+                                        "start": 861,
+                                        "length": 539,
+                                        "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                        "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                        "is_dependency": false,
+                                        "lines": [
+                                            24,
+                                            25,
+                                            26,
+                                            27,
+                                            28,
+                                            29,
+                                            30,
+                                            31,
+                                            32,
+                                            33,
+                                            34,
+                                            35,
+                                            36,
+                                            37,
+                                            38,
+                                            39
+                                        ],
+                                        "starting_column": 1,
+                                        "ending_column": 0
+                                    }
+                                },
+                                "signature": "trusteeWithdraw()"
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "WithdrawDAO.trusteeWithdraw() (Preprocessed_Contracts/simpleWithdrawTrustee.sol#35-37) ignores return value by trustee.send((this.balance + mainDAO.balanceOf(this)) - mainDAO.totalSupply()) (Preprocessed_Contracts/simpleWithdrawTrustee.sol#36)\n",
+            "markdown": "[WithdrawDAO.trusteeWithdraw()](Preprocessed_Contracts/simpleWithdrawTrustee.sol#L35-L37) ignores return value by [trustee.send((this.balance + mainDAO.balanceOf(this)) - mainDAO.totalSupply())](Preprocessed_Contracts/simpleWithdrawTrustee.sol#L36)\n",
+            "first_markdown_element": "Preprocessed_Contracts/simpleWithdrawTrustee.sol#L35-L37",
+            "id": "c45068b87a3e7b93506b77dde22ad90356c718da02c3e5fb53b2e5f6dba149c0",
+            "check": "unchecked-send",
+            "impact": "Medium",
+            "confidence": "Medium"
+        },
+        {
+            "elements": [
+                {
+                    "type": "node",
+                    "name": "",
+                    "source_mapping": {
+                        "start": 1252,
+                        "length": 5,
+                        "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            32
+                        ],
+                        "starting_column": 13,
+                        "ending_column": 18
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "function",
+                            "name": "withdraw",
+                            "source_mapping": {
+                                "start": 1069,
+                                "length": 196,
+                                "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    28,
+                                    29,
+                                    30,
+                                    31,
+                                    32,
+                                    33
+                                ],
+                                "starting_column": 5,
+                                "ending_column": 6
+                            },
+                            "type_specific_fields": {
+                                "parent": {
+                                    "type": "contract",
+                                    "name": "WithdrawDAO",
+                                    "source_mapping": {
+                                        "start": 861,
+                                        "length": 539,
+                                        "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                        "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                        "is_dependency": false,
+                                        "lines": [
+                                            24,
+                                            25,
+                                            26,
+                                            27,
+                                            28,
+                                            29,
+                                            30,
+                                            31,
+                                            32,
+                                            33,
+                                            34,
+                                            35,
+                                            36,
+                                            37,
+                                            38,
+                                            39
+                                        ],
+                                        "starting_column": 1,
+                                        "ending_column": 0
+                                    }
+                                },
+                                "signature": "withdraw()"
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "Deprecated standard detected THROW (Preprocessed_Contracts/simpleWithdrawTrustee.sol#32):\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "markdown": "Deprecated standard detected [THROW](Preprocessed_Contracts/simpleWithdrawTrustee.sol#L32):\n\t- Usage of \"throw\" should be replaced with \"revert()\"\n",
+            "first_markdown_element": "Preprocessed_Contracts/simpleWithdrawTrustee.sol#L32",
+            "id": "145b6d204c8da83edc262cd82e165fd6df9fdd2ee29a199f525da00223891998",
+            "check": "deprecated-standards",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [],
+            "description": "solc-0.4.24 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\n",
+            "markdown": "solc-0.4.24 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\n",
+            "first_markdown_element": "",
+            "id": "1d687d794f954ee692ca1d58ad5dd8291a8a0b5c0bcc4409d2dd8afb7258e605",
+            "check": "solc-version",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [
+                {
+                    "type": "variable",
+                    "name": "trustee",
+                    "source_mapping": {
+                        "start": 973,
+                        "length": 67,
+                        "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            26
+                        ],
+                        "starting_column": 5,
+                        "ending_column": 72
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "contract",
+                            "name": "WithdrawDAO",
+                            "source_mapping": {
+                                "start": 861,
+                                "length": 539,
+                                "filename_relative": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "filename_short": "Preprocessed_Contracts/simpleWithdrawTrustee.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    24,
+                                    25,
+                                    26,
+                                    27,
+                                    28,
+                                    29,
+                                    30,
+                                    31,
+                                    32,
+                                    33,
+                                    34,
+                                    35,
+                                    36,
+                                    37,
+                                    38,
+                                    39
+                                ],
+                                "starting_column": 1,
+                                "ending_column": 0
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "WithdrawDAO.trustee (Preprocessed_Contracts/simpleWithdrawTrustee.sol#26) should be constant \n",
+            "markdown": "[WithdrawDAO.trustee](Preprocessed_Contracts/simpleWithdrawTrustee.sol#L26) should be constant \n",
+            "first_markdown_element": "Preprocessed_Contracts/simpleWithdrawTrustee.sol#L26",
+            "id": "3574790b99d6fb1323c70a474660e4d2c5778cde0a35c6d891615ff937faf12d",
+            "check": "constable-states",
+            "impact": "Optimization",
+            "confidence": "High"
+        }
+    ],
+    "custom_findings": [],
+    "total_slither_issues": 4,
+    "total_custom_issues": 0
+}

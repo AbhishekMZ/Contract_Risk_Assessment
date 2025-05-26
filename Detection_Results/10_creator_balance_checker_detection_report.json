@@ -1,0 +1,197 @@
+{
+    "slither_success": true,
+    "slither_error": null,
+    "slither_stderr": null,
+    "slither_findings": [
+        {
+            "elements": [
+                {
+                    "type": "node",
+                    "name": "suicide(address)(creator)",
+                    "source_mapping": {
+                        "start": 1174,
+                        "length": 16,
+                        "filename_relative": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/10_creator_balance_checker.sol",
+                        "filename_short": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            40
+                        ],
+                        "starting_column": 13,
+                        "ending_column": 29
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "function",
+                            "name": "kill",
+                            "source_mapping": {
+                                "start": 1102,
+                                "length": 162,
+                                "filename_relative": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/10_creator_balance_checker.sol",
+                                "filename_short": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    37,
+                                    38,
+                                    39,
+                                    40,
+                                    41
+                                ],
+                                "starting_column": 5,
+                                "ending_column": 6
+                            },
+                            "type_specific_fields": {
+                                "parent": {
+                                    "type": "contract",
+                                    "name": "creatorBalanceChecker",
+                                    "source_mapping": {
+                                        "start": 281,
+                                        "length": 988,
+                                        "filename_relative": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/10_creator_balance_checker.sol",
+                                        "filename_short": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                                        "is_dependency": false,
+                                        "lines": [
+                                            7,
+                                            8,
+                                            9,
+                                            10,
+                                            11,
+                                            12,
+                                            13,
+                                            14,
+                                            15,
+                                            16,
+                                            17,
+                                            18,
+                                            19,
+                                            20,
+                                            21,
+                                            22,
+                                            23,
+                                            24,
+                                            25,
+                                            26,
+                                            27,
+                                            28,
+                                            29,
+                                            30,
+                                            31,
+                                            32,
+                                            33,
+                                            34,
+                                            35,
+                                            36,
+                                            37,
+                                            38,
+                                            39,
+                                            40,
+                                            41,
+                                            42,
+                                            43,
+                                            44
+                                        ],
+                                        "starting_column": 1,
+                                        "ending_column": 0
+                                    }
+                                },
+                                "signature": "kill()"
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "Deprecated standard detected suicide(address)(creator) (Preprocessed_Contracts/10_creator_balance_checker.sol#40):\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "markdown": "Deprecated standard detected [suicide(address)(creator)](Preprocessed_Contracts/10_creator_balance_checker.sol#L40):\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "first_markdown_element": "Preprocessed_Contracts/10_creator_balance_checker.sol#L40",
+            "id": "8c511da4951f1975bfa33a4d8525c149d42255aef4dc07121d0c73517bbe36f1",
+            "check": "deprecated-standards",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [],
+            "description": "solc-0.4.24 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\n",
+            "markdown": "solc-0.4.24 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\n",
+            "first_markdown_element": "",
+            "id": "1d687d794f954ee692ca1d58ad5dd8291a8a0b5c0bcc4409d2dd8afb7258e605",
+            "check": "solc-version",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [
+                {
+                    "type": "contract",
+                    "name": "creatorBalanceChecker",
+                    "source_mapping": {
+                        "start": 281,
+                        "length": 988,
+                        "filename_relative": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/10_creator_balance_checker.sol",
+                        "filename_short": "Preprocessed_Contracts/10_creator_balance_checker.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14,
+                            15,
+                            16,
+                            17,
+                            18,
+                            19,
+                            20,
+                            21,
+                            22,
+                            23,
+                            24,
+                            25,
+                            26,
+                            27,
+                            28,
+                            29,
+                            30,
+                            31,
+                            32,
+                            33,
+                            34,
+                            35,
+                            36,
+                            37,
+                            38,
+                            39,
+                            40,
+                            41,
+                            42,
+                            43,
+                            44
+                        ],
+                        "starting_column": 1,
+                        "ending_column": 0
+                    },
+                    "additional_fields": {
+                        "target": "contract",
+                        "convention": "CapWords"
+                    }
+                }
+            ],
+            "description": "Contract creatorBalanceChecker (Preprocessed_Contracts/10_creator_balance_checker.sol#7-44) is not in CapWords\n",
+            "markdown": "Contract [creatorBalanceChecker](Preprocessed_Contracts/10_creator_balance_checker.sol#L7-L44) is not in CapWords\n",
+            "first_markdown_element": "Preprocessed_Contracts/10_creator_balance_checker.sol#L7-L44",
+            "id": "4c2d9654dbabf7c62ea6c1e87dc55b21acd0596645b12cfcabd21c0192da6bf6",
+            "check": "naming-convention",
+            "impact": "Informational",
+            "confidence": "High"
+        }
+    ],
+    "custom_findings": [],
+    "total_slither_issues": 3,
+    "total_custom_issues": 0
+}

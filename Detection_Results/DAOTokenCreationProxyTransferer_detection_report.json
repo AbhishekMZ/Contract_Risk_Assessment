@@ -1,0 +1,9 @@
+{
+    "slither_success": false,
+    "slither_error": "Slither failed to produce output JSON.",
+    "slither_stderr": null,
+    "slither_findings": [],
+    "custom_findings": [],
+    "total_slither_issues": 0,
+    "total_custom_issues": 0
+}

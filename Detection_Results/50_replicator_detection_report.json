@@ -1,0 +1,412 @@
+{
+    "slither_success": true,
+    "slither_error": null,
+    "slither_stderr": null,
+    "slither_findings": [
+        {
+            "elements": [
+                {
+                    "type": "node",
+                    "name": "suicide(address)(creator)",
+                    "source_mapping": {
+                        "start": 751,
+                        "length": 16,
+                        "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                        "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            29
+                        ],
+                        "starting_column": 13,
+                        "ending_column": 29
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "function",
+                            "name": "kill",
+                            "source_mapping": {
+                                "start": 668,
+                                "length": 184,
+                                "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                                "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    25,
+                                    26,
+                                    27,
+                                    28,
+                                    29,
+                                    30,
+                                    31
+                                ],
+                                "starting_column": 5,
+                                "ending_column": 6
+                            },
+                            "type_specific_fields": {
+                                "parent": {
+                                    "type": "contract",
+                                    "name": "ReplicatorB",
+                                    "source_mapping": {
+                                        "start": 2,
+                                        "length": 853,
+                                        "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                                        "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                                        "is_dependency": false,
+                                        "lines": [
+                                            2,
+                                            3,
+                                            4,
+                                            5,
+                                            6,
+                                            7,
+                                            8,
+                                            9,
+                                            10,
+                                            11,
+                                            12,
+                                            13,
+                                            14,
+                                            15,
+                                            16,
+                                            17,
+                                            18,
+                                            19,
+                                            20,
+                                            21,
+                                            22,
+                                            23,
+                                            24,
+                                            25,
+                                            26,
+                                            27,
+                                            28,
+                                            29,
+                                            30,
+                                            31,
+                                            32
+                                        ],
+                                        "starting_column": 1,
+                                        "ending_column": 2
+                                    }
+                                },
+                                "signature": "kill()"
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "Deprecated standard detected suicide(address)(creator) (Preprocessed_Contracts/50_replicator.sol#29):\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "markdown": "Deprecated standard detected [suicide(address)(creator)](Preprocessed_Contracts/50_replicator.sol#L29):\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "first_markdown_element": "Preprocessed_Contracts/50_replicator.sol#L29",
+            "id": "21558980e0d3bd89a13e7e0398958c0d3a839f0abca30ef961b1f445566b7d68",
+            "check": "deprecated-standards",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [
+                {
+                    "type": "node",
+                    "name": "suicide(address)(creator)",
+                    "source_mapping": {
+                        "start": 1508,
+                        "length": 16,
+                        "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                        "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            65
+                        ],
+                        "starting_column": 13,
+                        "ending_column": 29
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "function",
+                            "name": "kill",
+                            "source_mapping": {
+                                "start": 1425,
+                                "length": 184,
+                                "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                                "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    61,
+                                    62,
+                                    63,
+                                    64,
+                                    65,
+                                    66,
+                                    67
+                                ],
+                                "starting_column": 5,
+                                "ending_column": 6
+                            },
+                            "type_specific_fields": {
+                                "parent": {
+                                    "type": "contract",
+                                    "name": "ReplicatorA",
+                                    "source_mapping": {
+                                        "start": 859,
+                                        "length": 753,
+                                        "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                                        "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                                        "is_dependency": false,
+                                        "lines": [
+                                            34,
+                                            35,
+                                            36,
+                                            37,
+                                            38,
+                                            39,
+                                            40,
+                                            41,
+                                            42,
+                                            43,
+                                            44,
+                                            45,
+                                            46,
+                                            47,
+                                            48,
+                                            49,
+                                            50,
+                                            51,
+                                            52,
+                                            53,
+                                            54,
+                                            55,
+                                            56,
+                                            57,
+                                            58,
+                                            59,
+                                            60,
+                                            61,
+                                            62,
+                                            63,
+                                            64,
+                                            65,
+                                            66,
+                                            67,
+                                            68,
+                                            69
+                                        ],
+                                        "starting_column": 1,
+                                        "ending_column": 0
+                                    }
+                                },
+                                "signature": "kill()"
+                            }
+                        }
+                    }
+                }
+            ],
+            "description": "Deprecated standard detected suicide(address)(creator) (Preprocessed_Contracts/50_replicator.sol#65):\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "markdown": "Deprecated standard detected [suicide(address)(creator)](Preprocessed_Contracts/50_replicator.sol#L65):\n\t- Usage of \"suicide()\" should be replaced with \"selfdestruct()\"\n",
+            "first_markdown_element": "Preprocessed_Contracts/50_replicator.sol#L65",
+            "id": "eec91b1058f33f60330fe770d63e3cfe8bf246494214e20c876a05bb964935e1",
+            "check": "deprecated-standards",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [],
+            "description": "solc-0.4.24 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\n",
+            "markdown": "solc-0.4.24 is an outdated solc version. Use a more recent version (at least 0.8.0), if possible.\n",
+            "first_markdown_element": "",
+            "id": "1d687d794f954ee692ca1d58ad5dd8291a8a0b5c0bcc4409d2dd8afb7258e605",
+            "check": "solc-version",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [
+                {
+                    "type": "function",
+                    "name": "Replicator",
+                    "source_mapping": {
+                        "start": 956,
+                        "length": 203,
+                        "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                        "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            40,
+                            41,
+                            42,
+                            43,
+                            44,
+                            45
+                        ],
+                        "starting_column": 5,
+                        "ending_column": 6
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "contract",
+                            "name": "ReplicatorA",
+                            "source_mapping": {
+                                "start": 859,
+                                "length": 753,
+                                "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                                "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    34,
+                                    35,
+                                    36,
+                                    37,
+                                    38,
+                                    39,
+                                    40,
+                                    41,
+                                    42,
+                                    43,
+                                    44,
+                                    45,
+                                    46,
+                                    47,
+                                    48,
+                                    49,
+                                    50,
+                                    51,
+                                    52,
+                                    53,
+                                    54,
+                                    55,
+                                    56,
+                                    57,
+                                    58,
+                                    59,
+                                    60,
+                                    61,
+                                    62,
+                                    63,
+                                    64,
+                                    65,
+                                    66,
+                                    67,
+                                    68,
+                                    69
+                                ],
+                                "starting_column": 1,
+                                "ending_column": 0
+                            }
+                        },
+                        "signature": "Replicator()"
+                    },
+                    "additional_fields": {
+                        "target": "function",
+                        "convention": "mixedCase"
+                    }
+                }
+            ],
+            "description": "Function ReplicatorA.Replicator() (Preprocessed_Contracts/50_replicator.sol#40-45) is not in mixedCase\n",
+            "markdown": "Function [ReplicatorA.Replicator()](Preprocessed_Contracts/50_replicator.sol#L40-L45) is not in mixedCase\n",
+            "first_markdown_element": "Preprocessed_Contracts/50_replicator.sol#L40-L45",
+            "id": "010a049465a9bda2e1b1df08a52b4afea6699c44007ecff5e5b46b305f503221",
+            "check": "naming-convention",
+            "impact": "Informational",
+            "confidence": "High"
+        },
+        {
+            "elements": [
+                {
+                    "type": "function",
+                    "name": "Replicator",
+                    "source_mapping": {
+                        "start": 82,
+                        "length": 402,
+                        "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                        "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                        "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                        "is_dependency": false,
+                        "lines": [
+                            7,
+                            8,
+                            9,
+                            10,
+                            11,
+                            12,
+                            13,
+                            14
+                        ],
+                        "starting_column": 5,
+                        "ending_column": 6
+                    },
+                    "type_specific_fields": {
+                        "parent": {
+                            "type": "contract",
+                            "name": "ReplicatorB",
+                            "source_mapping": {
+                                "start": 2,
+                                "length": 853,
+                                "filename_relative": "Preprocessed_Contracts/50_replicator.sol",
+                                "filename_absolute": "C:/Users/Mishael Abhishek/Projects/Contract_Eval/Preprocessed_Contracts/50_replicator.sol",
+                                "filename_short": "Preprocessed_Contracts/50_replicator.sol",
+                                "is_dependency": false,
+                                "lines": [
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    8,
+                                    9,
+                                    10,
+                                    11,
+                                    12,
+                                    13,
+                                    14,
+                                    15,
+                                    16,
+                                    17,
+                                    18,
+                                    19,
+                                    20,
+                                    21,
+                                    22,
+                                    23,
+                                    24,
+                                    25,
+                                    26,
+                                    27,
+                                    28,
+                                    29,
+                                    30,
+                                    31,
+                                    32
+                                ],
+                                "starting_column": 1,
+                                "ending_column": 2
+                            }
+                        },
+                        "signature": "Replicator()"
+                    },
+                    "additional_fields": {
+                        "target": "function",
+                        "convention": "mixedCase"
+                    }
+                }
+            ],
+            "description": "Function ReplicatorB.Replicator() (Preprocessed_Contracts/50_replicator.sol#7-14) is not in mixedCase\n",
+            "markdown": "Function [ReplicatorB.Replicator()](Preprocessed_Contracts/50_replicator.sol#L7-L14) is not in mixedCase\n",
+            "first_markdown_element": "Preprocessed_Contracts/50_replicator.sol#L7-L14",
+            "id": "4a05a7c5b54025c478c0615fddce080944fe37e62f02a63e9692ebc0b8d589e0",
+            "check": "naming-convention",
+            "impact": "Informational",
+            "confidence": "High"
+        }
+    ],
+    "custom_findings": [],
+    "total_slither_issues": 5,
+    "total_custom_issues": 0
+}

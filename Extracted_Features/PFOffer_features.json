@@ -1,0 +1,4 @@
+{
+    "error": "SlitherError: Invalid compilation: \nInvalid solc compilation, none of the solc versions provided worked:\n0.4.24: Invalid solc compilation Preprocessed_Contracts\\PFOffer.sol:102:5: Error: Expected ';' but got '}'\r\n    }\r\r\n    ^\r\n",
+    "contract_file": "PFOffer.sol"
+}

@@ -1,0 +1,1941 @@
+{
+    "ReentryProtectorMixin": {
+        "contract_name_in_file": "ReentryProtectorMixin",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "externalEnter()",
+                "signature": "externalEnter() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "externalLeave()",
+                "signature": "externalLeave() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "reentryProtector",
+                "type": "bool",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "CarefulSenderMixin": {
+        "contract_name_in_file": "CarefulSenderMixin",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "carefulSendWithFixedGas(address,uint256,uint256)",
+                "signature": "carefulSendWithFixedGas(address,uint256,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": [
+                    "bool TMP_2",
+                    "bool success"
+                ]
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "suggestedExtraGasToIncludeWithSends",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            }
+        ]
+    },
+    "FundsHolderMixin": {
+        "contract_name_in_file": "FundsHolderMixin",
+        "kind": "contract",
+        "inheritance": [
+            "CarefulSenderMixin",
+            "ReentryProtectorMixin"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "carefulSendWithFixedGas(address,uint256,uint256)",
+                "signature": "carefulSendWithFixedGas(address,uint256,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": [
+                    "bool TMP_5",
+                    "bool success"
+                ]
+            },
+            {
+                "name": "externalEnter()",
+                "signature": "externalEnter() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "externalLeave()",
+                "signature": "externalLeave() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "fundsOf(address)",
+                "signature": "fundsOf(address) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _address"
+                ],
+                "return_values": [
+                    "uint256 valueWei",
+                    "uint256 REF_6"
+                ]
+            },
+            {
+                "name": "withdrawFunds()",
+                "signature": "withdrawFunds() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsAdvanced(address,uint256,uint256)",
+                "signature": "withdrawFundsAdvanced(address,uint256,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGas"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsRP()",
+                "signature": "withdrawFundsRP() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsAdvancedRP(address,uint256,uint256)",
+                "signature": "withdrawFundsAdvancedRP(address,uint256,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "reentryProtector",
+                "type": "bool",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "suggestedExtraGasToIncludeWithSends",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "funds",
+                "type": "mapping(address => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "MoneyRounderMixin": {
+        "contract_name_in_file": "MoneyRounderMixin",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "roundMoneyDownNicely(uint256)",
+                "signature": "roundMoneyDownNicely(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _rawValueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_27",
+                    "uint256 TMP_30",
+                    "uint256 TMP_33",
+                    "uint256 TMP_36",
+                    "uint256 nicerValueWei",
+                    "uint256 TMP_21",
+                    "uint256 TMP_39",
+                    "uint256 TMP_24",
+                    "uint256 _rawValueWei"
+                ]
+            },
+            {
+                "name": "roundMoneyUpToWholeFinney(uint256)",
+                "signature": "roundMoneyUpToWholeFinney(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _valueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_42",
+                    "uint256 valueFinney"
+                ]
+            }
+        ],
+        "defined_state_variables": []
+    },
+    "NameableMixin": {
+        "contract_name_in_file": "NameableMixin",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "validateNameInternal(string)",
+                "signature": "validateNameInternal(string) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "bool foundNonPunctuation",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "extractNameFromData(bytes)",
+                "signature": "extractNameFromData(bytes) returns(string)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes _data"
+                ],
+                "return_values": [
+                    "string name",
+                    "string extractedName"
+                ]
+            },
+            {
+                "name": "computeNameFuzzyHash(string)",
+                "signature": "computeNameFuzzyHash(string) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "uint256 h",
+                    "uint256 fuzzyHash"
+                ]
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "minimumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "maximumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "nameDataPrefix",
+                "type": "string",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            }
+        ]
+    },
+    "ThroneRulesMixin": {
+        "contract_name_in_file": "ThroneRulesMixin",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [],
+        "defined_state_variables": []
+    },
+    "Kingdom": {
+        "contract_name_in_file": "Kingdom",
+        "kind": "contract",
+        "inheritance": [
+            "ThroneRulesMixin",
+            "NameableMixin",
+            "MoneyRounderMixin",
+            "FundsHolderMixin",
+            "CarefulSenderMixin",
+            "ReentryProtectorMixin"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "validateNameInternal(string)",
+                "signature": "validateNameInternal(string) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "bool foundNonPunctuation",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "extractNameFromData(bytes)",
+                "signature": "extractNameFromData(bytes) returns(string)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes _data"
+                ],
+                "return_values": [
+                    "string name",
+                    "string extractedName"
+                ]
+            },
+            {
+                "name": "computeNameFuzzyHash(string)",
+                "signature": "computeNameFuzzyHash(string) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "uint256 h",
+                    "uint256 fuzzyHash"
+                ]
+            },
+            {
+                "name": "roundMoneyDownNicely(uint256)",
+                "signature": "roundMoneyDownNicely(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _rawValueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_183",
+                    "uint256 _rawValueWei",
+                    "uint256 TMP_180",
+                    "uint256 TMP_189",
+                    "uint256 TMP_195",
+                    "uint256 nicerValueWei",
+                    "uint256 TMP_186",
+                    "uint256 TMP_198",
+                    "uint256 TMP_192"
+                ]
+            },
+            {
+                "name": "roundMoneyUpToWholeFinney(uint256)",
+                "signature": "roundMoneyUpToWholeFinney(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _valueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_201",
+                    "uint256 valueFinney"
+                ]
+            },
+            {
+                "name": "fundsOf(address)",
+                "signature": "fundsOf(address) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _address"
+                ],
+                "return_values": [
+                    "uint256 valueWei",
+                    "uint256 REF_32"
+                ]
+            },
+            {
+                "name": "withdrawFunds()",
+                "signature": "withdrawFunds() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsAdvanced(address,uint256,uint256)",
+                "signature": "withdrawFundsAdvanced(address,uint256,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGas"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsRP()",
+                "signature": "withdrawFundsRP() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsAdvancedRP(address,uint256,uint256)",
+                "signature": "withdrawFundsAdvancedRP(address,uint256,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "carefulSendWithFixedGas(address,uint256,uint256)",
+                "signature": "carefulSendWithFixedGas(address,uint256,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": [
+                    "bool TMP_216",
+                    "bool success"
+                ]
+            },
+            {
+                "name": "externalEnter()",
+                "signature": "externalEnter() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "externalLeave()",
+                "signature": "externalLeave() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "Kingdom(string,address,address,address,uint256,uint256,uint256,uint256,uint256)",
+                "signature": "Kingdom(string,address,address,address,uint256,uint256,uint256,uint256,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName",
+                    "address _world",
+                    "address _topWizard",
+                    "address _subWizard",
+                    "uint256 _startingClaimPriceWei",
+                    "uint256 _maximumClaimPriceWei",
+                    "uint256 _claimPriceAdjustPercent",
+                    "uint256 _curseIncubationDurationSeconds",
+                    "uint256 _commissionPerThousand"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "numberOfMonarchs()",
+                "signature": "numberOfMonarchs() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_222",
+                    "uint256 totalCount"
+                ]
+            },
+            {
+                "name": "isLivingMonarch()",
+                "signature": "isLivingMonarch() returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "bool alive"
+                ]
+            },
+            {
+                "name": "currentClaimPriceWei()",
+                "signature": "currentClaimPriceWei() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 REF_45",
+                    "uint256 newClaimPrice",
+                    "uint256 priceInWei"
+                ]
+            },
+            {
+                "name": "currentClaimPriceInFinney()",
+                "signature": "currentClaimPriceInFinney() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 priceInFinney",
+                    "uint256 TMP_239"
+                ]
+            },
+            {
+                "name": "validateProposedMonarchName(string)",
+                "signature": "validateProposedMonarchName(string) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _monarchName"
+                ],
+                "return_values": [
+                    "bool TMP_240",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "latestMonarchInternal()",
+                "signature": "latestMonarchInternal() returns(Kingdom.Monarch)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "Kingdom.Monarch monarch",
+                    "Kingdom.Monarch REF_53"
+                ]
+            },
+            {
+                "name": "fallback()",
+                "signature": "fallback() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "claimThrone(string)",
+                "signature": "claimThrone(string) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _monarchName"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "replaceWizard(address)",
+                "signature": "replaceWizard(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _replacement"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "fallbackRP()",
+                "signature": "fallbackRP() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "claimThroneRP(string)",
+                "signature": "claimThroneRP(string) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _monarchName"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "replaceWizardRP(address)",
+                "signature": "replaceWizardRP(address) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address replacement"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "recordCommissionEarned(uint256)",
+                "signature": "recordCommissionEarned(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _commissionWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "compensateLatestMonarch(uint256)",
+                "signature": "compensateLatestMonarch(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _compensationWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "reentryProtector",
+                "type": "bool",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "suggestedExtraGasToIncludeWithSends",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "funds",
+                "type": "mapping(address => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "minimumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "maximumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "nameDataPrefix",
+                "type": "string",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "kingdomName",
+                "type": "string",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "world",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "rules",
+                "type": "ThroneRulesMixin.ThroneRules",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "monarchsByNumber",
+                "type": "Kingdom.Monarch[]",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "topWizard",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "subWizard",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "KingdomFactory": {
+        "contract_name_in_file": "KingdomFactory",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "KingdomFactory()",
+                "signature": "KingdomFactory() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "fallback()",
+                "signature": "fallback() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "validateProposedThroneRules(uint256,uint256,uint256,uint256,uint256)",
+                "signature": "validateProposedThroneRules(uint256,uint256,uint256,uint256,uint256) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _startingClaimPriceWei",
+                    "uint256 _maximumClaimPriceWei",
+                    "uint256 _claimPriceAdjustPercent",
+                    "uint256 _curseIncubationDurationSeconds",
+                    "uint256 _commissionPerThousand"
+                ],
+                "return_values": [
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "createKingdom(string,address,address,address,uint256,uint256,uint256,uint256,uint256)",
+                "signature": "createKingdom(string,address,address,address,uint256,uint256,uint256,uint256,uint256) returns(Kingdom)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName",
+                    "address _world",
+                    "address _topWizard",
+                    "address _subWizard",
+                    "uint256 _startingClaimPriceWei",
+                    "uint256 _maximumClaimPriceWei",
+                    "uint256 _claimPriceAdjustPercent",
+                    "uint256 _curseIncubationDurationSeconds",
+                    "uint256 _commissionPerThousand"
+                ],
+                "return_values": [
+                    "Kingdom TMP_322",
+                    "Kingdom newKingdom"
+                ]
+            }
+        ],
+        "defined_state_variables": []
+    },
+    "World": {
+        "contract_name_in_file": "World",
+        "kind": "contract",
+        "inheritance": [
+            "ThroneRulesMixin",
+            "FundsHolderMixin",
+            "CarefulSenderMixin",
+            "MoneyRounderMixin",
+            "NameableMixin",
+            "ReentryProtectorMixin"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "fundsOf(address)",
+                "signature": "fundsOf(address) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "address _address"
+                ],
+                "return_values": [
+                    "uint256 valueWei",
+                    "uint256 REF_65"
+                ]
+            },
+            {
+                "name": "withdrawFunds()",
+                "signature": "withdrawFunds() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsAdvanced(address,uint256,uint256)",
+                "signature": "withdrawFundsAdvanced(address,uint256,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGas"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsRP()",
+                "signature": "withdrawFundsRP() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "withdrawFundsAdvancedRP(address,uint256,uint256)",
+                "signature": "withdrawFundsAdvancedRP(address,uint256,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "carefulSendWithFixedGas(address,uint256,uint256)",
+                "signature": "carefulSendWithFixedGas(address,uint256,uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _toAddress",
+                    "uint256 _valueWei",
+                    "uint256 _extraGasIncluded"
+                ],
+                "return_values": [
+                    "bool success",
+                    "bool TMP_337"
+                ]
+            },
+            {
+                "name": "externalEnter()",
+                "signature": "externalEnter() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "externalLeave()",
+                "signature": "externalLeave() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "roundMoneyDownNicely(uint256)",
+                "signature": "roundMoneyDownNicely(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _rawValueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_347",
+                    "uint256 TMP_353",
+                    "uint256 TMP_359",
+                    "uint256 nicerValueWei",
+                    "uint256 TMP_344",
+                    "uint256 _rawValueWei",
+                    "uint256 TMP_350",
+                    "uint256 TMP_341",
+                    "uint256 TMP_356"
+                ]
+            },
+            {
+                "name": "roundMoneyUpToWholeFinney(uint256)",
+                "signature": "roundMoneyUpToWholeFinney(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _valueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_362",
+                    "uint256 valueFinney"
+                ]
+            },
+            {
+                "name": "validateNameInternal(string)",
+                "signature": "validateNameInternal(string) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "bool foundNonPunctuation",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "extractNameFromData(bytes)",
+                "signature": "extractNameFromData(bytes) returns(string)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes _data"
+                ],
+                "return_values": [
+                    "string extractedName",
+                    "string name"
+                ]
+            },
+            {
+                "name": "computeNameFuzzyHash(string)",
+                "signature": "computeNameFuzzyHash(string) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "uint256 h",
+                    "uint256 fuzzyHash"
+                ]
+            },
+            {
+                "name": "World(address,uint256,KingdomFactory,uint256)",
+                "signature": "World(address,uint256,KingdomFactory,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _topWizard",
+                    "uint256 _kingdomCreationFeeWei",
+                    "KingdomFactory _kingdomFactory",
+                    "uint256 _maximumClaimPriceWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "numberOfKingdoms()",
+                "signature": "numberOfKingdoms() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_436",
+                    "uint256 totalCount"
+                ]
+            },
+            {
+                "name": "findKingdomCalled(string)",
+                "signature": "findKingdomCalled(string) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName"
+                ],
+                "return_values": [
+                    "uint256 REF_87",
+                    "uint256 kingdomNumber"
+                ]
+            },
+            {
+                "name": "validateProposedKingdomName(string)",
+                "signature": "validateProposedKingdomName(string) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName"
+                ],
+                "return_values": [
+                    "bool TMP_438",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "validateProposedThroneRules(uint256,uint256,uint256,uint256)",
+                "signature": "validateProposedThroneRules(uint256,uint256,uint256,uint256) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _startingClaimPriceWei",
+                    "uint256 _claimPriceAdjustPercent",
+                    "uint256 _curseIncubationDurationSeconds",
+                    "uint256 _commissionPerThousand"
+                ],
+                "return_values": [
+                    "bool allowed",
+                    "bool TMP_439"
+                ]
+            },
+            {
+                "name": "kingdomCreationFeeInFinney()",
+                "signature": "kingdomCreationFeeInFinney() returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_440",
+                    "uint256 feeInFinney"
+                ]
+            },
+            {
+                "name": "fallback()",
+                "signature": "fallback() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "createKingdom(string,uint256,uint256,uint256,uint256)",
+                "signature": "createKingdom(string,uint256,uint256,uint256,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName",
+                    "uint256 _startingClaimPriceWei",
+                    "uint256 _claimPriceAdjustPercent",
+                    "uint256 _curseIncubationDurationSeconds",
+                    "uint256 _commissionPerThousand"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "replaceWizard(address)",
+                "signature": "replaceWizard(address) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _replacement"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setKingdomCreationFeeWei(uint256)",
+                "signature": "setKingdomCreationFeeWei(uint256) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _kingdomCreationFeeWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setMaximumClaimPriceWei(uint256)",
+                "signature": "setMaximumClaimPriceWei(uint256) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _maximumClaimPriceWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setKingdomFactory(KingdomFactory)",
+                "signature": "setKingdomFactory(KingdomFactory) returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "KingdomFactory _kingdomFactory"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "createKingdomRP(string,uint256,uint256,uint256,uint256)",
+                "signature": "createKingdomRP(string,uint256,uint256,uint256,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName",
+                    "uint256 _startingClaimPriceWei",
+                    "uint256 _claimPriceAdjustPercent",
+                    "uint256 _curseIncubationDurationSeconds",
+                    "uint256 _commissionPerThousand"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "replaceWizardRP(address)",
+                "signature": "replaceWizardRP(address) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address replacement"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setKingdomCreationFeeWeiRP(uint256)",
+                "signature": "setKingdomCreationFeeWeiRP(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _kingdomCreationFeeWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setMaximumClaimPriceWeiRP(uint256)",
+                "signature": "setMaximumClaimPriceWeiRP(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _maximumClaimPriceWei"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setKingdomFactoryRP(KingdomFactory)",
+                "signature": "setKingdomFactoryRP(KingdomFactory) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "KingdomFactory _kingdomFactory"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "checkUniqueAndRegisterNewKingdomName(string,uint256)",
+                "signature": "checkUniqueAndRegisterNewKingdomName(string,uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _kingdomName",
+                    "uint256 _newKingdomNumber"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "reentryProtector",
+                "type": "bool",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "minimumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "maximumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "nameDataPrefix",
+                "type": "string",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "suggestedExtraGasToIncludeWithSends",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "funds",
+                "type": "mapping(address => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "topWizard",
+                "type": "address",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "kingdomCreationFeeWei",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "kingdomsByNumber",
+                "type": "World.KingdomListing[]",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "maximumClaimPriceWei",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "kingdomFactory",
+                "type": "KingdomFactory",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "kingdomNumbersByfuzzyHash",
+                "type": "mapping(uint256 => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "ExposedInternalsForTesting": {
+        "contract_name_in_file": "ExposedInternalsForTesting",
+        "kind": "contract",
+        "inheritance": [
+            "NameableMixin",
+            "MoneyRounderMixin"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "validateNameInternal(string)",
+                "signature": "validateNameInternal(string) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "bool foundNonPunctuation",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "extractNameFromData(bytes)",
+                "signature": "extractNameFromData(bytes) returns(string)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes _data"
+                ],
+                "return_values": [
+                    "string extractedName",
+                    "string name"
+                ]
+            },
+            {
+                "name": "computeNameFuzzyHash(string)",
+                "signature": "computeNameFuzzyHash(string) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "uint256 h",
+                    "uint256 fuzzyHash"
+                ]
+            },
+            {
+                "name": "roundMoneyDownNicely(uint256)",
+                "signature": "roundMoneyDownNicely(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _rawValueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_567",
+                    "uint256 TMP_558",
+                    "uint256 _rawValueWei",
+                    "uint256 TMP_564",
+                    "uint256 TMP_570",
+                    "uint256 TMP_555",
+                    "uint256 nicerValueWei",
+                    "uint256 TMP_552",
+                    "uint256 TMP_561"
+                ]
+            },
+            {
+                "name": "roundMoneyUpToWholeFinney(uint256)",
+                "signature": "roundMoneyUpToWholeFinney(uint256) returns(uint256)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _valueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_573",
+                    "uint256 valueFinney"
+                ]
+            },
+            {
+                "name": "roundMoneyDownNicelyET(uint256)",
+                "signature": "roundMoneyDownNicelyET(uint256) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _rawValueWei"
+                ],
+                "return_values": [
+                    "uint256 TMP_574",
+                    "uint256 nicerValueWei"
+                ]
+            },
+            {
+                "name": "roundMoneyUpToWholeFinneyET(uint256)",
+                "signature": "roundMoneyUpToWholeFinneyET(uint256) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _valueWei"
+                ],
+                "return_values": [
+                    "uint256 valueFinney",
+                    "uint256 TMP_575"
+                ]
+            },
+            {
+                "name": "validateNameInternalET(string)",
+                "signature": "validateNameInternalET(string) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "bool TMP_576",
+                    "bool allowed"
+                ]
+            },
+            {
+                "name": "extractNameFromDataET(bytes)",
+                "signature": "extractNameFromDataET(bytes) returns(string)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes _data"
+                ],
+                "return_values": [
+                    "string TMP_577",
+                    "string extractedName"
+                ]
+            },
+            {
+                "name": "computeNameFuzzyHashET(string)",
+                "signature": "computeNameFuzzyHashET(string) returns(uint256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "string _name"
+                ],
+                "return_values": [
+                    "uint256 fuzzyHash",
+                    "uint256 TMP_578"
+                ]
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "minimumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "maximumNameLength",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "nameDataPrefix",
+                "type": "string",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            }
+        ]
+    }
+}

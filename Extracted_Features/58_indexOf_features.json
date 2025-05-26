@@ -1,0 +1,101 @@
+{
+    "IndexOf": {
+        "contract_name_in_file": "IndexOf",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "IndexOf()",
+                "signature": "IndexOf() returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "indexOf(string,string)",
+                "signature": "indexOf(string,string) returns(int256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "string _a",
+                    "string _b"
+                ],
+                "return_values": [
+                    "uint256 TMP_13",
+                    "uint256 TMP_8",
+                    "int256 TMP_26",
+                    "uint256 TMP_29"
+                ]
+            },
+            {
+                "name": "whatWasTheVal()",
+                "signature": "whatWasTheVal() returns(int256)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "int256 whatwastheval"
+                ]
+            },
+            {
+                "name": "kill()",
+                "signature": "kill() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorVariables()",
+                "signature": "slitherConstructorVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "creator",
+                "type": "address",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "whatwastheval",
+                "type": "int256",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}

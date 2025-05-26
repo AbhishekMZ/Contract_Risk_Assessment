@@ -1,0 +1,1327 @@
+{
+    "multiowned": {
+        "contract_name_in_file": "multiowned",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "multiowned(address[],uint256)",
+                "signature": "multiowned(address[],uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address[] _owners",
+                    "uint256 _required"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "revoke(bytes32)",
+                "signature": "revoke(bytes32) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "changeOwner(address,address)",
+                "signature": "changeOwner(address,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _from",
+                    "address _to"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "addOwner(address)",
+                "signature": "addOwner(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "removeOwner(address)",
+                "signature": "removeOwner(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "changeRequirement(uint256)",
+                "signature": "changeRequirement(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _newRequired"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getOwner(uint256)",
+                "signature": "getOwner(uint256) returns(address)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 ownerIndex"
+                ],
+                "return_values": [
+                    "address TMP_52"
+                ]
+            },
+            {
+                "name": "isOwner(address)",
+                "signature": "isOwner(address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _addr"
+                ],
+                "return_values": [
+                    "bool TMP_54"
+                ]
+            },
+            {
+                "name": "hasConfirmed(bytes32,address)",
+                "signature": "hasConfirmed(bytes32,address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation",
+                    "address _owner"
+                ],
+                "return_values": [
+                    "bool TMP_60"
+                ]
+            },
+            {
+                "name": "confirmAndCheck(bytes32)",
+                "signature": "confirmAndCheck(bytes32) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "reorganizeOwners()",
+                "signature": "reorganizeOwners() returns()",
+                "visibility": "private",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "clearPending()",
+                "signature": "clearPending() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlyowner()",
+                "signature": "onlyowner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlymanyowners(bytes32)",
+                "signature": "onlymanyowners(bytes32) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "m_required",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_numOwners",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_owners",
+                "type": "uint256[256]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "c_maxOwners",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "m_ownerIndex",
+                "type": "mapping(uint256 => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_pending",
+                "type": "mapping(bytes32 => multiowned.PendingState)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_pendingIndex",
+                "type": "bytes32[]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "daylimit": {
+        "contract_name_in_file": "daylimit",
+        "kind": "contract",
+        "inheritance": [
+            "multiowned"
+        ],
+        "is_fully_implemented": false,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "multiowned(address[],uint256)",
+                "signature": "multiowned(address[],uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address[] _owners",
+                    "uint256 _required"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "revoke(bytes32)",
+                "signature": "revoke(bytes32) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "changeOwner(address,address)",
+                "signature": "changeOwner(address,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _from",
+                    "address _to"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "addOwner(address)",
+                "signature": "addOwner(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "removeOwner(address)",
+                "signature": "removeOwner(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "changeRequirement(uint256)",
+                "signature": "changeRequirement(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _newRequired"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getOwner(uint256)",
+                "signature": "getOwner(uint256) returns(address)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 ownerIndex"
+                ],
+                "return_values": [
+                    "address TMP_143"
+                ]
+            },
+            {
+                "name": "isOwner(address)",
+                "signature": "isOwner(address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _addr"
+                ],
+                "return_values": [
+                    "bool TMP_145"
+                ]
+            },
+            {
+                "name": "hasConfirmed(bytes32,address)",
+                "signature": "hasConfirmed(bytes32,address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation",
+                    "address _owner"
+                ],
+                "return_values": [
+                    "bool TMP_151"
+                ]
+            },
+            {
+                "name": "confirmAndCheck(bytes32)",
+                "signature": "confirmAndCheck(bytes32) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "reorganizeOwners()",
+                "signature": "reorganizeOwners() returns()",
+                "visibility": "private",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "clearPending()",
+                "signature": "clearPending() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "daylimit(uint256)",
+                "signature": "daylimit(uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _limit"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setDailyLimit(uint256)",
+                "signature": "setDailyLimit(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _newLimit"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "resetSpentToday()",
+                "signature": "resetSpentToday() returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "underLimit(uint256)",
+                "signature": "underLimit(uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyowner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _value"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "today()",
+                "signature": "today() returns(uint256)",
+                "visibility": "private",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_192"
+                ]
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlyowner()",
+                "signature": "onlyowner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlymanyowners(bytes32)",
+                "signature": "onlymanyowners(bytes32) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "limitedDaily(uint256)",
+                "signature": "limitedDaily(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _value"
+                ],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "m_required",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_numOwners",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_owners",
+                "type": "uint256[256]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "c_maxOwners",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "m_ownerIndex",
+                "type": "mapping(uint256 => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_pending",
+                "type": "mapping(bytes32 => multiowned.PendingState)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_pendingIndex",
+                "type": "bytes32[]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_dailyLimit",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_spentToday",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_lastDay",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    },
+    "multisig": {
+        "contract_name_in_file": "multisig",
+        "kind": "contract",
+        "inheritance": [],
+        "is_fully_implemented": false,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "changeOwner(address,address)",
+                "signature": "changeOwner(address,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _from",
+                    "address _to"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "execute(address,uint256,bytes)",
+                "signature": "execute(address,uint256,bytes) returns(bytes32)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _to",
+                    "uint256 _value",
+                    "bytes _data"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "confirm(bytes32)",
+                "signature": "confirm(bytes32) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _h"
+                ],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": []
+    },
+    "Wallet": {
+        "contract_name_in_file": "Wallet",
+        "kind": "contract",
+        "inheritance": [
+            "daylimit",
+            "multiowned",
+            "multisig"
+        ],
+        "is_fully_implemented": true,
+        "defined_functions_and_modifiers": [
+            {
+                "name": "daylimit(uint256)",
+                "signature": "daylimit(uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _limit"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "setDailyLimit(uint256)",
+                "signature": "setDailyLimit(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _newLimit"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "resetSpentToday()",
+                "signature": "resetSpentToday() returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "underLimit(uint256)",
+                "signature": "underLimit(uint256) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyowner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _value"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "today()",
+                "signature": "today() returns(uint256)",
+                "visibility": "private",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": [
+                    "uint256 TMP_213"
+                ]
+            },
+            {
+                "name": "multiowned(address[],uint256)",
+                "signature": "multiowned(address[],uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address[] _owners",
+                    "uint256 _required"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "revoke(bytes32)",
+                "signature": "revoke(bytes32) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "changeOwner(address,address)",
+                "signature": "changeOwner(address,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _from",
+                    "address _to"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "addOwner(address)",
+                "signature": "addOwner(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "removeOwner(address)",
+                "signature": "removeOwner(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _owner"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "changeRequirement(uint256)",
+                "signature": "changeRequirement(uint256) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _newRequired"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "getOwner(uint256)",
+                "signature": "getOwner(uint256) returns(address)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 ownerIndex"
+                ],
+                "return_values": [
+                    "address TMP_266"
+                ]
+            },
+            {
+                "name": "isOwner(address)",
+                "signature": "isOwner(address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _addr"
+                ],
+                "return_values": [
+                    "bool TMP_268"
+                ]
+            },
+            {
+                "name": "hasConfirmed(bytes32,address)",
+                "signature": "hasConfirmed(bytes32,address) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": true,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation",
+                    "address _owner"
+                ],
+                "return_values": [
+                    "bool TMP_274"
+                ]
+            },
+            {
+                "name": "confirmAndCheck(bytes32)",
+                "signature": "confirmAndCheck(bytes32) returns(bool)",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "reorganizeOwners()",
+                "signature": "reorganizeOwners() returns()",
+                "visibility": "private",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "clearPending()",
+                "signature": "clearPending() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "changeOwner(address,address)",
+                "signature": "changeOwner(address,address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _from",
+                    "address _to"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "execute(address,uint256,bytes)",
+                "signature": "execute(address,uint256,bytes) returns(bytes32)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _to",
+                    "uint256 _value",
+                    "bytes _data"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "confirm(bytes32)",
+                "signature": "confirm(bytes32) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _h"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "Wallet(address[],uint256,uint256)",
+                "signature": "Wallet(address[],uint256,uint256) returns()",
+                "visibility": "public",
+                "is_constructor": true,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address[] _owners",
+                    "uint256 _required",
+                    "uint256 _daylimit"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "kill(address)",
+                "signature": "kill(address) returns()",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _to"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "fallback()",
+                "signature": "fallback() returns()",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": true,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "execute(address,uint256,bytes)",
+                "signature": "execute(address,uint256,bytes) returns(bytes32)",
+                "visibility": "external",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlyowner"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "address _to",
+                    "uint256 _value",
+                    "bytes _data"
+                ],
+                "return_values": [
+                    "bytes32 _r"
+                ]
+            },
+            {
+                "name": "confirm(bytes32)",
+                "signature": "confirm(bytes32) returns(bool)",
+                "visibility": "public",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [
+                    "onlymanyowners"
+                ],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _h"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "clearPending()",
+                "signature": "clearPending() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "slitherConstructorConstantVariables()",
+                "signature": "slitherConstructorConstantVariables() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": false,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "limitedDaily(uint256)",
+                "signature": "limitedDaily(uint256) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "uint256 _value"
+                ],
+                "return_values": []
+            },
+            {
+                "name": "onlyowner()",
+                "signature": "onlyowner() returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [],
+                "return_values": []
+            },
+            {
+                "name": "onlymanyowners(bytes32)",
+                "signature": "onlymanyowners(bytes32) returns()",
+                "visibility": "internal",
+                "is_constructor": false,
+                "is_declared_modifier": true,
+                "applied_modifiers": [],
+                "is_payable": false,
+                "is_view": false,
+                "is_pure": false,
+                "parameters": [
+                    "bytes32 _operation"
+                ],
+                "return_values": []
+            }
+        ],
+        "defined_state_variables": [
+            {
+                "name": "m_required",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_numOwners",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_owners",
+                "type": "uint256[256]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "c_maxOwners",
+                "type": "uint256",
+                "visibility": "internal",
+                "is_constant": true,
+                "is_immutable": false
+            },
+            {
+                "name": "m_ownerIndex",
+                "type": "mapping(uint256 => uint256)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_pending",
+                "type": "mapping(bytes32 => multiowned.PendingState)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_pendingIndex",
+                "type": "bytes32[]",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_dailyLimit",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_spentToday",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_lastDay",
+                "type": "uint256",
+                "visibility": "public",
+                "is_constant": false,
+                "is_immutable": false
+            },
+            {
+                "name": "m_txs",
+                "type": "mapping(bytes32 => Wallet.Transaction)",
+                "visibility": "internal",
+                "is_constant": false,
+                "is_immutable": false
+            }
+        ]
+    }
+}
