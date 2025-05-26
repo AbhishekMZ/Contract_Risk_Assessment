@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c4c86501839322e5888cfad0a4a11430bd3d3812e258c5059f96c3b534889dc8
-size 218
+slither-analyzer
+solc-select
+chardet
+matplotlib
+pandas
+seaborn

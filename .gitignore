@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee3adf50829b364b812849f671e7568afacbdbe597f9eff2b3279a2c0298e863
-size 1406
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+ENV/
+.env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# Data and output folders
+External_Results/
+Models/
+Reports/
+Detection_Results/
+Processed_Contracts/
+Preprocessed_Contracts/
+Extracted_Features/
+SmartContracts/
+External_Contracts/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.tmp

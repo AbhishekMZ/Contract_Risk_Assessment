@@ -1,0 +1,58 @@
+# Contract Risk Assessment Project - Development Prompt
+
+## Context
+I'm working on a Contract Risk Assessment Project that analyzes both traditional legal contracts and blockchain smart contracts for risks, vulnerabilities, and compliance issues. The project combines NLP, machine learning, and specialized security analysis tools to provide comprehensive contract evaluation.
+
+## Current State
+I have established the basic project structure including:
+- Directory organization for source code, web application, and datasets
+- Integration points for security analysis tools (Mythril, Oyente, SmartCheck)
+- Flask web application framework
+- Initial datasets of legal contracts and smart contracts
+
+## Request
+Based on the detailed project documentation I've provided, please help me develop the following components:
+
+1. **Core Analysis Engine**:
+   - Generate Python code for the contract parsing and analysis pipeline
+   - Design the risk scoring algorithm that evaluates identified issues
+   - Create the integration layer between different analysis tools
+   - Implement the machine learning models for contract classification and risk detection
+
+2. **Web Application Development**:
+   - Design the Flask application structure with appropriate routes and controllers
+   - Create API endpoints for contract submission and result retrieval
+   - Design database schema for storing contracts and analysis results
+   - Develop interactive dashboard components for visualizing contract risks
+
+3. **Data Pipeline Architecture**:
+   - Design the data flow from contract upload through analysis to reporting
+   - Create scalable processing queues for handling multiple analysis requests
+   - Implement caching strategies for performance optimization
+   - Design storage solutions for different types of contract data
+
+4. **Testing Strategy**:
+   - Develop test cases for both legal and smart contract analysis
+   - Create validation methodology for machine learning models
+   - Design integration tests for the complete system
+   - Implement performance benchmarks for the analysis pipeline
+
+## Constraints
+- All code should be written in Python for backend and analysis components
+- Web frontend should use modern JavaScript frameworks (React/Vue.js)
+- Smart contract examples should be in Solidity
+- Machine learning components should use TensorFlow or PyTorch
+- Solution should be containerizable with Docker for easy deployment
+
+## Expected Output
+For each component, please provide:
+1. Detailed code implementations with clear documentation
+2. Explanation of design choices and architectural decisions
+3. Implementation suggestions and best practices
+4. Potential challenges and mitigation strategies
+5. Next steps for further enhancement
+
+Please approach this systematically, focusing on creating production-ready code that follows best practices for security, scalability, and maintainability.
+
+## Additional Information
+Refer to the attached project documentation for a comprehensive understanding of the project structure, components, and technical requirements.
