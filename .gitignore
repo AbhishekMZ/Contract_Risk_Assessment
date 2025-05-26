@@ -22,3 +22,5 @@ Thumbs.db
 # Misc
 *.log
 *.tmp
+SmartContracts/malicious_contracts.csv
+SmartContracts/smart_contracts.jsonl
