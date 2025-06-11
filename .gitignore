@@ -75,10 +75,23 @@ backend/results/
 backend/uploads/
 Results/
 **/temp/
+
+# Data directories
 Detection_Results/
 External_Results/
 Extracted_Features/
 Preprocessed_Contracts/
+SmartContracts/
+Models/
+External_Contracts/
+Data/
+*.csv
+*.jsonl
+*.json
+*.pkl
+*.bin
+*.h5
+*.model
 
 # Large data files
 SmartContracts/malicious_contracts.csv
