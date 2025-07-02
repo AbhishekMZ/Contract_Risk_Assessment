@@ -1,4 +1,0 @@
-{
-    "error": "SlitherError: Invalid compilation: \nInvalid solc compilation, none of the solc versions provided worked:\n0.4.24: Invalid solc compilation Preprocessed_Contracts\\withdraw.sol:19:1: Error: Source \"github.com/slockit/DAO/DAO.sol\" not found: File not found.\r\nimport \"github.com/slockit/DAO/DAO.sol\";\r\r\n^--------------------------------------^\r\n",
-    "contract_file": "withdraw.sol"
-}

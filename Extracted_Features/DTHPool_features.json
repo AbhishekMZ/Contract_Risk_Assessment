@@ -1,4 +1,0 @@
-{
-    "error": "SlitherError: Invalid compilation: \nInvalid solc compilation, none of the solc versions provided worked:\n0.4.24: Invalid solc compilation Preprocessed_Contracts\\DTHPool.sol:169:66: Error: Expected ';' but got '}'\r\n    modifier onlyDelegate() {if (msg.sender != delegate) throw; _}\r\r\n                                                                 ^\r\n",
-    "contract_file": "DTHPool.sol"
-}

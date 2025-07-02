@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, UploadFile, File, Form, BackgroundTasks
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form, BackgroundTasks, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel
@@ -11,6 +11,11 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 import logging
+
+# Import WebSocket components
+from websocket.router import include_websocket_routes
+from websocket import manager, EventType
+from websocket.events import analysis_progress_event, analysis_complete_event, analysis_error_event
 
 # Import analysis modules
 from core.vulnerability_detector import VulnerabilityDetector
@@ -36,10 +41,18 @@ class Settings(BaseSettings):
     results_folder: str = "results"
     allowed_extensions: List[str] = [".sol"]
     max_file_size: int = 16 * 1024 * 1024  # 16MB
-    
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
+    app_env: str = "development"
+    secret_key: str = "your-secret-key-here"
+    access_token_expire_minutes: int = 1440
+    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/contract_eval"
+    cors_origins: List[str] = ["http://localhost:3000", "http://localhost:8000"]
+    upload_dir: str = "./uploads"
+
+    model_config = {
+        "env_file": ".env",
+        "env_file_encoding": "utf-8",
+        "extra": "allow"
+    }
 
 settings = Settings()
 
@@ -61,6 +74,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include WebSocket routes
+include_websocket_routes(app)
 
 # Models
 class AnalysisResult(BaseModel):
@@ -93,7 +109,7 @@ class AnalysisRequest(BaseModel):
 analysis_status: Dict[str, AnalysisStatus] = {}
 
 # Helper functions
-def analyze_contract_sync(file_path: str, analysis_id: str):
+async def analyze_contract_sync(file_path: str, analysis_id: str, user_id: str = None):
     """Synchronous function to analyze a contract"""
     try:
         logger.info(f"Starting analysis for {analysis_id} with file {file_path}")
@@ -101,17 +117,51 @@ def analyze_contract_sync(file_path: str, analysis_id: str):
         analysis_status[analysis_id] = AnalysisStatus(
             id=analysis_id,
             status="processing",
-            progress=10,
-            message="Starting analysis..."
+            progress=0,
+            message="Starting analysis"
         )
+        
+        # Update status
+        status = analysis_status[analysis_id]
+        status.progress = 10
+        status.message = "Initializing analysis"
+        
+        # Send initial WebSocket event
+        if user_id:
+            await manager.send_to_user(user_id, analysis_progress_event(analysis_id, {
+                "percent": 0.0,
+                "step": "Initializing analysis",
+                "details": "Preparing contract analysis"
+            }))
+        else:
+            await manager.broadcast(analysis_progress_event(analysis_id, {
+                "percent": 0.0,
+                "step": "Initializing analysis",
+                "details": "Preparing contract analysis"
+            }))
         
         # Check if file exists
         if not os.path.exists(file_path):
             raise FileNotFoundError(f"Contract file not found at {file_path}")
             
         # Read the contract content
-        analysis_status[analysis_id].progress = 20
-        analysis_status[analysis_id].message = "Reading contract file..."
+        status.progress = 20
+        status.message = "Loading contract"
+        
+        # Send progress WebSocket event
+        if user_id:
+            await manager.send_to_user(user_id, analysis_progress_event(analysis_id, {
+                "percent": 0.25,
+                "step": "Loading contract",
+                "details": "Parsing Solidity code"
+            }))
+        else:
+            await manager.broadcast(analysis_progress_event(analysis_id, {
+                "percent": 0.25,
+                "step": "Loading contract",
+                "details": "Parsing Solidity code"
+            }))
+        
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 source_code = f.read()
@@ -126,9 +176,25 @@ def analyze_contract_sync(file_path: str, analysis_id: str):
         if not source_code or len(source_code.strip()) == 0:
             raise ValueError(f"Contract file is empty at {file_path}")
         
+        # Update status
+        status.progress = 50
+        status.message = "Running analysis"
+        
+        # Send progress WebSocket event
+        if user_id:
+            await manager.send_to_user(user_id, analysis_progress_event(analysis_id, {
+                "percent": 0.50,
+                "step": "Running analysis",
+                "details": "Detecting vulnerabilities"
+            }))
+        else:
+            await manager.broadcast(analysis_progress_event(analysis_id, {
+                "percent": 0.50,
+                "step": "Running analysis",
+                "details": "Detecting vulnerabilities"
+            }))
+        
         # Run vulnerability detection
-        analysis_status[analysis_id].progress = 40
-        analysis_status[analysis_id].message = "Detecting vulnerabilities..."
         logger.info(f"Running vulnerability detection for {analysis_id}")
         vulnerabilities = vulnerability_detector.detect_vulnerabilities(source_code)
         logger.info(f"Found {len(vulnerabilities)} vulnerabilities for {analysis_id}")
@@ -162,9 +228,25 @@ def analyze_contract_sync(file_path: str, analysis_id: str):
             "success": True
         }
         
+        # Update status
+        status.progress = 75
+        status.message = "Processing results"
+        
+        # Send progress WebSocket event
+        if user_id:
+            await manager.send_to_user(user_id, analysis_progress_event(analysis_id, {
+                "percent": 0.75,
+                "step": "Processing results",
+                "details": "Generating vulnerability report"
+            }))
+        else:
+            await manager.broadcast(analysis_progress_event(analysis_id, {
+                "percent": 0.75,
+                "step": "Processing results",
+                "details": "Generating vulnerability report"
+            }))
+        
         # Save the result
-        analysis_status[analysis_id].progress = 80
-        analysis_status[analysis_id].message = "Saving analysis results..."
         result_file = os.path.join(settings.results_folder, f"{analysis_id}.json")
         logger.info(f"Saving analysis result to {result_file}")
         
@@ -175,11 +257,33 @@ def analyze_contract_sync(file_path: str, analysis_id: str):
         except Exception as save_error:
             logger.error(f"Error saving analysis result: {str(save_error)}")
             raise
-
-        # Final status update (after file is safely written)
-        analysis_status[analysis_id].status = "completed"
-        analysis_status[analysis_id].progress = 100
-        analysis_status[analysis_id].message = "Analysis completed successfully"
+        
+        # Update status with completion
+        status.status = "completed"
+        status.progress = 100
+        status.message = "Analysis complete"
+        
+        # Send completion WebSocket event
+        analysis_data = {
+            "analysis_id": analysis_id,
+            "contract_name": os.path.basename(file_path),
+            "file_count": 1,
+            "status": "completed"
+        }
+        
+        results_summary = {
+            "vulnerability_count": len(vulnerabilities),
+            "high": severity_counts.get(Severity.HIGH.value, 0),
+            "medium": severity_counts.get(Severity.MEDIUM.value, 0),
+            "low": severity_counts.get(Severity.LOW.value, 0),
+            "info": severity_counts.get(Severity.INFO.value, 0)
+        }
+        
+        if user_id:
+            await manager.send_to_user(user_id, analysis_complete_event(analysis_data, results_summary))
+        else:
+            await manager.broadcast(analysis_complete_event(analysis_data, results_summary))
+        
         logger.info(f"Analysis {analysis_id} completed successfully")
         
         return analysis_result
@@ -190,6 +294,14 @@ def analyze_contract_sync(file_path: str, analysis_id: str):
             analysis_status[analysis_id].status = "failed"
             analysis_status[analysis_id].progress = 0
             analysis_status[analysis_id].message = f"Analysis failed: {str(e)}"
+            
+            # Send error WebSocket event
+            error_message = f"Analysis failed: {str(e)}"
+            if user_id:
+                await manager.send_to_user(user_id, analysis_error_event(analysis_id, error_message))
+            else:
+                await manager.broadcast(analysis_error_event(analysis_id, error_message))
+        
         raise
 
 # Routes
@@ -287,7 +399,10 @@ async def analyze_contract(
         
         # Start analysis in background
         logger.info(f"Starting analysis for file: {file_path} with analysis ID: {analysis_id}")
-        background_tasks.add_task(analyze_contract_sync, file_path, analysis_id)
+        # Extract user_id from request if available (simplified, in production use proper auth)
+        user_id = None  # In production: extract from request authentication
+        
+        background_tasks.add_task(analyze_contract_sync, file_path, analysis_id, user_id)
         
         return analysis_status[analysis_id]
         
@@ -378,9 +493,12 @@ async def health_check():
 # Add startup event to create necessary directories
 @app.on_event("startup")
 async def startup_event():
-    """Create necessary directories on startup"""
+    # Create necessary directories
     os.makedirs(settings.upload_folder, exist_ok=True)
     os.makedirs(settings.results_folder, exist_ok=True)
+    
+    # Log WebSocket initialization
+    logger.info("WebSocket service initialized")
 
 if __name__ == "__main__":
     import uvicorn
